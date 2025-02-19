@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMates - Perfil de Usuario</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <a href="/index.html"><h1>MealMates</h1></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/my-recipes.html">Mis recetas</a></li>
+                <li><a href="/pages/weekly-planner.html">Menú Semanal</a></li>
+            </ul>
+        </nav>
+        <div class="user-icon active">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="profile-container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <i class="fas fa-user"></i>
+                <span>Nombre_usuario</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-view="profile">
+                        <i class="fas fa-user-edit"></i>
+                        <span>Gestionar cuenta</span>
+                    </li>
+                    <li data-view="security">
+                        <i class="fas fa-lock"></i>
+                        <span>Seguridad cuenta</span>
+                    </li>
+                    <li data-view="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Ajustes</span>
+                    </li>
+                    <li class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar sesión</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="content-panel">
+            <!-- Vista del perfil -->
+            <section class="profile-view active" id="profile-view">
+                <h2>Perfil de Usuario</h2>
+                <div class="profile-content">
+                    <div class="profile-image">
+                        <img src="https://picsum.photos/seed/user/150/150" alt="Foto de perfil">
+                        <button class="change-photo">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" value="Nombre_usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Descripción</label>
+                            <textarea id="description" rows="4">Descripción del usuario</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="nombre_usuario@correo.com">
+                        </div>
+                        <button type="submit" class="save-button">Guardar cambios</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Vista de seguridad -->
+            <section class="security-view" id="security-view">
+                <h2>Seguridad de la Cuenta</h2>
+                <form class="security-form">
+                    <div class="form-group">
+                        <label for="current-password">Contraseña actual</label>
+                        <input type="password" id="current-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Nueva contraseña</label>
+                        <input type="password" id="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Repetir nueva contraseña</label>
+                        <input type="password" id="confirm-password">
+                    </div>
+                    <button type="submit" class="save-button">Actualizar contraseña</button>
+                </form>
+            </section>
+
+            <!-- Vista de ajustes -->
+            <section class="settings-view" id="settings-view">
+                <h2>Ajustes</h2>
+                <form class="settings-form settings-grid">
+                    <div class="settings-section">
+                        <div class="settings-header">
+                            <i class="fas fa-bell"></i>
+                            <h3>Notificaciones</h3>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <input type="checkbox" id="emailNotif">
+                                <div class="toggle-content">
+                                    <span class="toggle-text">Notificaciones por email</span>
+                                    <span class="toggle-description">Recibe actualizaciones sobre nuevas recetas y consejos</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <input type="checkbox" id="weeklyDigest">
+                                <div class="toggle-content">
+                                    <span class="toggle-text">Resumen semanal</span>
+                                    <span class="toggle-description">Recibe un resumen de las mejores recetas de la semana</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <div class="settings-header">
+                            <i class="fas fa-palette"></i>
+                            <h3>Apariencia</h3>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <input type="checkbox" id="darkMode">
+                                <div class="toggle-content">
+                                    <span class="toggle-text">Modo oscuro</span>
+                                    <span class="toggle-description">Cambia a un tema oscuro para reducir el cansancio visual</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <div class="settings-header">
+                            <i class="fas fa-globe"></i>
+                            <h3>Idioma y región</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Idioma de la aplicación</label>
+                            <select id="language" class="settings-select">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <div class="settings-header">
+                            <i class="fas fa-lock"></i>
+                            <h3>Privacidad</h3>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <input type="checkbox" id="publicProfile">
+                                <div class="toggle-content">
+                                    <span class="toggle-text">Perfil público</span>
+                                    <span class="toggle-description">Permite que otros usuarios vean tu perfil</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <input type="checkbox" id="shareRecipes">
+                                <div class="toggle-content">
+                                    <span class="toggle-text">Compartir recetas</span>
+                                    <span class="toggle-description">Permite que otros usuarios vean y copien tus recetas</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-actions">
+                        <button type="submit" class="save-button">Guardar Cambios</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="/assets/js/profile.js"></script>
+</body>
+</html> 

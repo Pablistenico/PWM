@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMates - Ratatouille Tradicional</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/recipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <a href="/index.html"><h1>MealMates</h1></a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/pages/blog.html">Blog</a></li>
+                <li><a href="/pages/my-recipes.html">Mis recetas</a></li>
+                <li><a href="/pages/weekly-planner.html">Menú Semanal</a></li>
+            </ul>
+        </nav>
+        <div class="user-icon">
+            <div class="user-menu-container">
+                <i class="fas fa-user-circle"></i>
+                <div class="user-menu">
+                    <div class="user-menu-header">
+                        <a href="pages/profile.html" class="guest-text">Invitado</a>
+                        <a href="pages/profile.html" class="user-text" style="display: none">Nombre_usuario</a>
+                    </div>
+                    <div class="user-menu-items guest-items">
+                        <a href="pages/login.html" class="menu-item">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Iniciar sesión
+                        </a>
+                        <a href="pages/login.html#register" class="menu-item">
+                            <i class="fas fa-user-plus"></i>
+                            Registrarse
+                        </a>
+                    </div>
+                    <div class="user-menu-items user-items" style="display: none">
+                        <a href="pages/profile.html" class="menu-item">
+                            <i class="fas fa-user-edit"></i>
+                            Mi perfil
+                        </a>
+                        <a href="pages/weekly-planner.html" class="menu-item">
+                            <i class="fas fa-calendar-week"></i>
+                            Planificador
+                        </a>
+                        <a href="#" class="menu-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Cerrar sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="recipe-container">
+        <article class="recipe-content">
+            <div class="recipe-header">
+                <div class="recipe-title-section">
+                    <h1>Ratatouille Tradicional</h1>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 1h 30min</span>
+                        <span><i class="fas fa-signal"></i> Media</span>
+                        <span><i class="fas fa-utensils"></i> 6 porciones</span>
+                    </div>
+                    <div class="recipe-tags">
+                        <span>Francesa</span>
+                        <span>Vegetariana</span>
+                        <span>Saludable</span>
+                    </div>
+                </div>
+                <div class="recipe-actions">
+                    <button class="action-btn"><i class="far fa-bookmark"></i> Guardar</button>
+                    <button class="action-btn"><i class="fas fa-share-alt"></i> Compartir</button>
+                    <button class="action-btn"><i class="fas fa-print"></i> Imprimir</button>
+                </div>
+            </div>
+
+            <div class="recipe-image">
+                <img src="https://picsum.photos/seed/ratatouille/1200/600" alt="Ratatouille">
+            </div>
+
+            <div class="recipe-description">
+                <p>El ratatouille es un plato tradicional provenzal de verduras estofadas que se originó en Niza. Esta receta conserva todos los sabores auténticos del sur de Francia, perfecta como plato principal vegetariano o como acompañamiento.</p>
+            </div>
+
+            <div class="recipe-grid">
+                <div class="ingredients-section">
+                    <h2>Ingredientes</h2>
+                    <ul class="ingredients-list">
+                        <li>2 berenjenas medianas</li>
+                        <li>4 calabacines medianos</li>
+                        <li>2 pimientos rojos</li>
+                        <li>5 tomates maduros</li>
+                        <li>1 cebolla grande</li>
+                        <li>4 dientes de ajo</li>
+                        <li>2 ramitas de tomillo fresco</li>
+                        <li>2 hojas de laurel</li>
+                        <li>1/2 taza de aceite de oliva</li>
+                        <li>Sal y pimienta al gusto</li>
+                        <li>Albahaca fresca para decorar</li>
+                    </ul>
+                </div>
+
+                <div class="instructions-section">
+                    <h2>Preparación</h2>
+                    <ol class="instructions-list">
+                        <li>Cortar todas las verduras en rodajas de aproximadamente el mismo grosor (0.5 cm).</li>
+                        <li>Calentar 2 cucharadas de aceite en una cazuela grande y sofreír la cebolla picada hasta que esté transparente.</li>
+                        <li>Añadir el ajo picado y cocinar por 1 minuto más.</li>
+                        <li>Agregar los tomates pelados y cortados, el tomillo y el laurel. Cocinar a fuego medio durante 10 minutos.</li>
+                        <li>En una sartén aparte, saltear por separado las berenjenas, calabacines y pimientos con aceite de oliva hasta que estén dorados.</li>
+                        <li>Colocar las verduras salteadas sobre la salsa de tomate en capas concéntricas, alternando los colores.</li>
+                        <li>Tapar y cocinar a fuego lento durante 45 minutos.</li>
+                        <li>Retirar la tapa, subir el fuego y cocinar 10 minutos más para reducir el líquido.</li>
+                        <li>Servir caliente o a temperatura ambiente, decorado con albahaca fresca.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="recipe-tips">
+                <h2>Consejos</h2>
+                <ul>
+                    <li>Para un mejor resultado, elige verduras de tamaño similar.</li>
+                    <li>Puedes prepararlo con un día de antelación, los sabores se intensificarán.</li>
+                    <li>Si prefieres una versión más ligera, puedes hornear las verduras en lugar de saltearlas.</li>
+                </ul>
+            </div>
+
+            <div class="recipe-nutrition">
+                <h2>Información Nutricional</h2>
+                <div class="nutrition-grid">
+                    <div class="nutrition-item">
+                        <span class="value">185</span>
+                        <span class="label">Calorías</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <span class="value">14g</span>
+                        <span class="label">Grasas</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <span class="value">12g</span>
+                        <span class="label">Carbohidratos</span>
+                    </div>
+                    <div class="nutrition-item">
+                        <span class="value">4g</span>
+                        <span class="label">Proteínas</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="/assets/js/recipe.js"></script>
+</body>
+</html> 

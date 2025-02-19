@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMates - Tu compañero culinario</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <h1>MealMates</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="pages/blog.html">Blog</a></li>
+                <li><a href="/pages/my-recipes.html">Mis recetas</a></li>
+                <li><a href="pages/weekly-planner.html">Menu Semanal</a></li>
+            </ul>
+        </nav>
+        <div class="user-icon">
+            <div class="user-menu-container">
+                <i class="fas fa-user-circle"></i>
+                <div class="user-menu">
+                    <div class="user-menu-header">
+                        <a href="pages/profile.html" class="guest-text">Invitado</a>
+                        <a href="pages/profile.html" class="user-text" style="display: none">Nombre_usuario</a>
+                    </div>
+                    <div class="user-menu-items guest-items">
+                        <a href="pages/login.html" class="menu-item">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Iniciar sesión
+                        </a>
+                        <a href="pages/login.html#register" class="menu-item">
+                            <i class="fas fa-user-plus"></i>
+                            Registrarse
+                        </a>
+                    </div>
+                    <div class="user-menu-items user-items" style="display: none">
+                        <a href="pages/profile.html" class="menu-item">
+                            <i class="fas fa-user-edit"></i>
+                            Mi perfil
+                        </a>
+                        <a href="pages/weekly-planner.html" class="menu-item">
+                            <i class="fas fa-calendar-week"></i>
+                            Planificador
+                        </a>
+                        <a href="#" class="menu-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Cerrar sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Meal Mates</h1>
+            <p>Tu compañero perfecto para la cocina</p>
+        </div>
+    </section>
+
+    <section class="featured-recipes">
+        <h2>Recetas destacadas</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://picsum.photos/seed/pasta/300/200" alt="Pasta Carbonara">
+                        </div>
+                        <h3>Pasta Carbonara</h3>
+                        <p>Una deliciosa receta italiana tradicional con huevo, queso y panceta.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="recipe-button" onclick="window.location.href='/pages/recipe.html'">Ver receta</button>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://picsum.photos/seed/salad/300/200" alt="Ensalada César">
+                        </div>
+                        <h3>Ensalada César</h3>
+                        <p>Fresca y crujiente ensalada con pollo, crutones y aderezo especial.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="recipe-button" onclick="window.location.href='/pages/recipe.html'">Ver receta</button>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://picsum.photos/seed/tacos/300/200" alt="Tacos al Pastor">
+                        </div>
+                        <h3>Tacos al Pastor</h3>
+                        <p>Auténticos tacos mexicanos con carne marinada y piña fresca.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <button class="recipe-button" onclick="window.location.href='/pages/recipe.html'">Ver receta</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <button class="primary-button" onclick="window.location.href='pages/blog.html'">Ver Blog</button>
+    </section>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Explora</h3>
+                <ul>
+                    <li><a href="/pages/blog.html">Blog de recetas</a></li>
+                    <li><a href="/pages/weekly-planner.html">Planificador semanal</a></li>
+                    <li><a href="#">Recetas populares</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#">Vegetarianas</a></li>
+                    <li><a href="#">Postres</a></li>
+                    <li><a href="#">Platos principales</a></li>
+                    <li><a href="#">Cocina internacional</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Comunidad</h3>
+                <ul>
+                    <li><a href="#">Chefs destacados</a></li>
+                    <li><a href="#">Eventos culinarios</a></li>
+                    <li><a href="#">Programa de afiliados</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos de uso</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MealMates. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
