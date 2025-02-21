@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const components = {
-        "header": "/components/header.html",
+        "lheader": "/components/logged-header.html",
+        "uheader": "/components/unlogged-header.html",
         "footer": "/components/footer.html"
     };
 
