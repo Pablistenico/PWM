@@ -15,11 +15,19 @@
     <main class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <h2>Iniciar Sesión</h2>
-                <p>¡Bienvenido de nuevo a MealMates!</p>
+                <h2>Registrarse</h2>
+                <p><h4>¡Bienvenido a MealMates!</h4></p>
+                <p>Regístrate y disfruta de múltiples ventajas</p>
             </div>
             
             <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Nombre de usuario</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="nombre_usuario" required>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <div class="input-with-icon">
@@ -35,13 +43,20 @@
                         <input type="password" id="password" placeholder="••••••••" required>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="password">Repetir contraseña</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
 
                 <div class="form-options">
                     <label class="remember-me">
                         <input type="checkbox" checked>
                         <span>Recordarme</span>
                     </label>
-                    <a href="forgot-password.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    <a href="#" class="forgot-password.html">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <button type="submit" class="login-button">Iniciar Sesión</button>
@@ -60,10 +75,6 @@
                     </div>
                 </div>
             </form>
-
-            <div class="register-link">
-                ¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a>
-            </div>
         </div>
     </main>
 
