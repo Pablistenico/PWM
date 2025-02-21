@@ -4,6 +4,7 @@
     --accent-color: #e67e22;
     --text-color: #2c3e50;
     --white: #ffffff;
+    --black: #000
 }
 
 * {
@@ -24,13 +25,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: var(--white);
+    background-color: var(--accent-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .brand h1 {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.navigation {
+    background-color: var(--accent-color);
 }
 
 .navigation ul {
@@ -41,13 +46,13 @@ body {
 
 .navigation a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 .user-icon i {
@@ -174,7 +179,7 @@ body {
 .footer {
     background-color: var(--secondary-color);
     color: var(--white);
-    padding: 3rem 2rem;
+    padding-top: 2rem;
 }
 
 .social-icons {
@@ -238,8 +243,14 @@ body {
     text-align: center;
     font-size: 0.9rem;
     opacity: 0.7;
+    background-color: var(--white);
 }
 
+.footer-bottom p {
+    color: var(--black);
+    font-weight: 500;
+}
+    
 /* Responsive Design */
 @media (max-width: 768px) {
     .navigation {
