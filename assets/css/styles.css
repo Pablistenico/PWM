@@ -178,10 +178,11 @@ body {
 }
 
 .social-icons {
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .social-icons a {
@@ -195,11 +196,15 @@ body {
 }
 
 .footer-columns {
+    background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem;
+
 }
 
 .footer-column h3 {
@@ -227,8 +232,8 @@ body {
 }
 
 .footer-bottom {
-    margin-top: 3rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
     font-size: 0.9rem;
