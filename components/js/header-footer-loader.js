@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const components = {
-        "lheader": "/components/logged-header.html",
-        "uheader": "/components/unlogged-header.html",
-        "footer": "/components/footer.html"
+        "lheader": "../components/logged-header.html",
+        "uheader": "../components/unlogged-header.html",
+        "footer": "../components/footer.html"
     };
 
     Object.keys(components).forEach(id => {
