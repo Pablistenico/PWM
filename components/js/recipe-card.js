@@ -35,7 +35,7 @@ class RecipeCard extends HTMLElement {
       // Definir el contenido HTML del componente (incluye estilos propios)
       this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="../../assets/css/styles.css">
-        <link rel="stylesheet" href="/assets/css/my-recipes.css">
+        <link rel="stylesheet" href="../assets/css/my-recipes.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <div class="recipe-card">
           <div class="recipe-image">
