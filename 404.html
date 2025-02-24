@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <script>
+        // Redirect logic for SPA-like behavior
+        const path = window.location.pathname;
+        const redirectTo = path.replace('/pablistenico.github.io/', '/');
+        window.location.replace(redirectTo);
+    </script>
+</head>
+<body>
+    <h1>Página no encontrada</h1>
+    <p>Redirigiendo...</p>
+</body>
+</html> 
