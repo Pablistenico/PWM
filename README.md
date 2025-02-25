@@ -88,15 +88,18 @@ mealmates/
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/student1">
-        <img src="https://via.placeholder.com/100" width="100px;" alt="Foto de [Nombre]"/><br>
-        <sub><b>Nombre Apellido</b></sub>
+      <a href="https://github.com/Pablistenico">
+        <sub><b>Pablo Monzón Toca</b></sub>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/student2">
-        <img src="https://via.placeholder.com/100" width="100px;" alt="Foto de [Nombre]"/><br>
-        <sub><b>Nombre Apellido</b></sub>
+      <a href="https://github.com/gitfrandu4">
+        <sub><b>Francisco Javier López-Dufour Morales</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ElenaArtiles">
+        <sub><b>Elena Artiles Morales</b></sub>
       </a>
     </td>
   </tr>
