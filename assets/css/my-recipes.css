@@ -4,14 +4,14 @@
     min-height: calc(100vh - 70px);
 }
 
-.recipes-header {
+.title-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.recipes-header h1 {
+.title-header h1 {
     color: var(--secondary-color);
 }
 

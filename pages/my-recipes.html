@@ -15,12 +15,12 @@
     <lheader></lheader>
 
     <main class="recipes-container">
-        <div class="recipes-header">
+        <div class="title-header">
             <h1>Mis Recetas</h1>
         </div>
         <div class="tab">
             <button class="tablink active" onclick="openTab(event, 'my-recipes')">Mis recetas</button>
-            <button class="tablink" onclick="openTab(event, 'saved-recipes')">Mis recetas guardadas</button>
+            <button class="tablink" onclick="openTab(event, 'saved-recipes')">Recetas guardadas</button>
         </div>
 
         <div id="my-recipes" class="recipes-grid tab-content active">
@@ -65,7 +65,7 @@
                 alt="Ensalada César">
             </recipe-card>
         </div>
-        <div id="saved-recipes" class="tab-content">
+        <div id="saved-recipes" class="saved-recipes-content tab-content">
             <div class="empty-state">
                 <i class="fas fa-bookmark"></i>
                 <h2>No tienes recetas guardadas</h2>

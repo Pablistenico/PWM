@@ -380,6 +380,10 @@ body {
     background-color: #fee;
 } 
 
+.saved-recipes-content {
+    justify-content: center;
+}
+
 .tab {
     display: flex;
     cursor: pointer;
@@ -387,19 +391,21 @@ body {
 .tab button {
     padding: 10px 20px;
     border: none;
-    background-color: lightgray;
+    background-color: var(--primary-color);
     margin-right: 5px;
     cursor: pointer;
 }
 .tab button.active {
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
 }
 /* Style tab content */
 .tab-content {
     display: none;
     padding: 20px;
     border: 1px solid #ccc;
+    border-radius: 10px;
     margin-top: 10px;
     opacity: 0;
     visibility: hidden;
