@@ -175,6 +175,27 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Empty State Styles */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-color);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: #666;
+}
+
 /* Footer Styles */
 .footer {
     background-color: var(--secondary-color);
@@ -358,3 +379,37 @@ body {
 .menu-item.logout:hover {
     background-color: #fee;
 } 
+
+.tab {
+    display: flex;
+    cursor: pointer;
+}
+.tab button {
+    padding: 10px 20px;
+    border: none;
+    background-color: lightgray;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.tab button.active {
+    background-color: gray;
+    color: white;
+}
+/* Style tab content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tab-content.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
