@@ -380,10 +380,6 @@ body {
     background-color: #fee;
 } 
 
-.saved-recipes-content {
-    justify-content: center;
-}
-
 .tab {
     display: flex;
     cursor: pointer;
