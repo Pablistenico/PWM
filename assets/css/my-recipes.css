@@ -23,9 +23,12 @@
     background-color: var(--accent-color);
     color: var(--white);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
 }
 
 .add-recipe-btn:hover {
@@ -79,7 +82,8 @@
 }
 
 .edit-btn,
-.delete-btn {
+.delete-btn,
+.save-btn {
     width: 35px;
     height: 35px;
     border: none;
@@ -92,6 +96,11 @@
 }
 
 .edit-btn {
+    background: var(--white);
+    color: black;
+}
+
+.save-btn {
     background: var(--white);
     color: var(--accent-color);
 }

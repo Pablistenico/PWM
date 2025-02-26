@@ -98,7 +98,11 @@ class RecipeCard extends HTMLElement {
                     opacity: 1;
                 }
 
-                .edit-btn, .delete-btn {
+                .saved:hover .recipe-actions {
+                    opacity: 1;
+                }
+
+                .edit-btn, .delete-btn, .save-btn {
                     width: 35px;
                     height: 35px;
                     border: none;
@@ -114,19 +118,10 @@ class RecipeCard extends HTMLElement {
                     position: absolute;
                     top: 10px;
                     right: 10px;
-                }
-
-                .save-btn {
-                    background: none;
-                    border: none;
-                    color: gold;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    opacity: 0.8;
-                }
-
-                .save-btn:hover {
-                    opacity: 1;
+                    display: flex;
+                    gap: 0.5rem;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
                 }
             </style>
         `;
@@ -136,7 +131,7 @@ class RecipeCard extends HTMLElement {
                 <div class="recipe-image">
                     <img src="${image}" alt="${alt}">
                     <div class="recipe-actions">
-                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="edit-btn" href="../../pages/recipe-generator.html"><i class="fas fa-edit"></i></button>
                         <button class="delete-btn"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>
