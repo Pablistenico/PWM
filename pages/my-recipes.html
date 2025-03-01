@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="../components/js/header-footer-loader.js"></script>
     <script defer src="../components/js/recipe-card.js"></script>
+    <script defer src="../components/js/tabs.js"></script>
 </head>
 <body>
     <lheader></lheader>
 
     <main class="recipes-container">
-        <div class="recipes-header">
+        <div class="title-header">
             <h1>Mis Recetas</h1>
-            <a href="pages/recipe-generator.html" class="add-recipe-btn">
-                <i class="fas fa-plus"></i> Nueva Receta
-            </a>
+        </div>
+        <div class="tab">
+            <button class="tablink active" onclick="openTab(event, 'my-recipes')">Mis recetas</button>
+            <button class="tablink" onclick="openTab(event, 'saved-recipes')">Recetas guardadas</button>
         </div>
 
-        <div class="recipes-grid">
+        <div id="my-recipes" class="recipes-grid tab-content active">
             <recipe-card 
+                option="created"
                 title="Pasta Mediterránea" 
                 time="30 min" 
                 difficulty="Fácil" 
@@ -30,16 +33,43 @@
                 image="https://picsum.photos/seed/food1/400/300" 
                 alt="Pasta Mediterránea">
             </recipe-card>
-
             <recipe-card 
+                option="created"
                 title="Ensalada César" 
                 time="15 min" 
-                difficulty="Fácil" 
+                difficulty="Difícil" 
                 categories="Ensalada, Saludable" 
                 image="https://picsum.photos/seed/food2/400/300" 
                 alt="Ensalada César">
             </recipe-card>
-            
+            <a href="./recipe-generator.html" class="add-recipe-btn">
+                <i class="fas fa-plus"></i> Nueva Receta
+            </a>
+        </div>
+        <div id="saved-recipes" class="recipes-grid tab-content">
+            <!-- <div class="empty-state">
+                <i class="fas fa-bookmark"></i>
+                <h2>No tienes recetas guardadas</h2>
+                <p>Explora recetas y guárdalas para verlas aquí</p>
+            </div> -->
+            <recipe-card 
+                option="saved"
+                title="Arroz 3 delicias" 
+                time="50 min" 
+                difficulty="Medio" 
+                categories="Arroces, Chino" 
+                image="https://picsum.photos/seed/food3/400/300" 
+                alt="Arroz 3 delicias">
+            </recipe-card>
+            <recipe-card 
+                option="saved"
+                title="Sandwich mixto" 
+                time="5 min" 
+                difficulty="Fácil" 
+                categories="Desayuno, Rápido" 
+                image="https://picsum.photos/seed/food4/400/300" 
+                alt="Sandwich mixto">
+            </recipe-card>
         </div>
     </main>
 
@@ -48,4 +78,4 @@
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/my-recipes.js"></script>
 </body>
-</html> 
+</html>
