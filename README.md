@@ -116,7 +116,7 @@ mealmates/
         <br />
         <sub><b>Pablo Monzón Toca</b></sub>
       </a>
-      <div>Frontend & UI</div>
+      <!--div>Frontend & UI</div-->
     </td>
     <td align="center">
       <a href="https://github.com/gitfrandu4">
@@ -124,7 +124,7 @@ mealmates/
         <br />
         <sub><b>Francisco Javier López-Dufour Morales</b></sub>
       </a>
-      <div>JavaScript & UX</div>
+      <!--div>JavaScript & UX</div-->
     </td>
     <td align="center">
       <a href="https://github.com/ElenaArtiles">
@@ -132,7 +132,7 @@ mealmates/
         <br />
         <sub><b>Elena Artiles Morales</b></sub>
       </a>
-      <div>Diseño & CSS</div>
+      <!--div>Diseño & CSS</div-->
     </td>
   </tr>
 </table>
