@@ -25,6 +25,7 @@ Tu compañero perfecto para la cocina 🥘
   - [👥 Equipo](#-equipo)
   - [📊 Organización](#-organización)
     - [Metodología](#metodología)
+    - [Documentación](#documentación)
     - [Herramientas de Gestión](#herramientas-de-gestión)
     - [Ramas Git](#ramas-git)
   - [📝 Licencia](#-licencia)
@@ -112,6 +113,11 @@ mealmates/
 - Reuniones semanales de seguimiento
 - Control de versiones con Git
 
+### Documentación
+- [Requisitos del proyecto PWM](./Requisitos%20del%20proyecto%20PWM.pdf): Documento de requisitos y especificaciones del proyecto
+- [Meal Mates Mockups](./Meal%20Mates%20Mockups.pdf): Diseños y mockups de la interfaz de usuario
+- [Presentación Sprint 1](./presentation-sprint-1.pdf): Primera presentación del proyecto
+  
 ### Herramientas de Gestión
 - **Trello**: [Enlace al tablero](https://trello.com/b/your-board)
   - Seguimiento de tareas
