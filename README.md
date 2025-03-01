@@ -10,8 +10,6 @@
 
 Tu compañero perfecto para la cocina 🥘
 
-[Ver Demo](https://your-demo-link.com) | [Reportar Bug](https://github.com/your-repo/issues) | [Solicitar Feature](https://github.com/your-repo/issues)
-
 </div>
 
 ## 📋 Tabla de Contenidos
