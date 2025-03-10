@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Get the current path to determine if we're in root or subdirectory
+    const isRoot = window.location.pathname.endsWith('index.html') || 
+                   window.location.pathname.endsWith('PWM/');
+
     const components = {
-        "lheader": "../components/logged-header.html",
-        "uheader": "../components/unlogged-header.html",
-        "footer": "../components/footer.html"
+        "lheader": isRoot ? "./components/logged-header.html" : "./../components/logged-header.html",
+        "uheader": isRoot ? "./components/unlogged-header.html" : "./../components/unlogged-header.html",
+        "footer": isRoot ? "./components/footer.html" : "./../components/footer.html"
     };
 
     Object.keys(components).forEach(id => {
