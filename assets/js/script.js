@@ -11,3 +11,8 @@ if (window.location.hostname.includes('pablistenico.github.io')) {
 
 // Make baseUrl available globally
 window.baseUrl = baseUrl;
+
+// Función para navegar a una ruta
+function navigateTo(path) {
+    window.location.href = `${window.baseUrl}/${path}`;
+}
