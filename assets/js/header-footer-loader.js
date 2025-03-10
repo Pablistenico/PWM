@@ -1,15 +1,11 @@
-let baseUrl;
-
 if (window.location.hostname.includes('pablistenico.github.io')) {
     // GitHub Pages environment
-    baseUrl = 'https://pablistenico.github.io/PWM';
+    window.baseUrl = 'https://pablistenico.github.io/PWM';
 } else {
     // Local development environment
-    baseUrl = '';
+    window.baseUrl = '';
 }
 
-// Make baseUrl available globally
-window.baseUrl = baseUrl;
 
 document.addEventListener("DOMContentLoaded", function () {
     const components = {
