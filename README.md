@@ -98,7 +98,7 @@ mealmates/
 │ │ ├── script.js
 │ │ └── ...
 │ └── img/
-├── pages/
+├── src/
 │ ├── recipe.html
 │ ├── profile.html
 │ └── ...
