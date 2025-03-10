@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": "italian",
+      "name": "Italiana",
+      "count": 15,
+      "subcategories": ["Pasta", "Pizza", "Risotto", "Antipasti"]
+    },
+    {
+      "id": "mexican",
+      "name": "Mexicana",
+      "count": 12,
+      "subcategories": ["Tacos", "Salsas", "Antojitos", "Sopas"]
+    },
+    {
+      "id": "asian",
+      "name": "Asiática",
+      "count": 18,
+      "subcategories": ["Japonesa", "China", "Tailandesa", "Vietnamita"]
+    },
+    {
+      "id": "vegetarian",
+      "name": "Vegetariana",
+      "count": 20,
+      "subcategories": ["Ensaladas", "Legumbres", "Tofu", "Bowls"]
+    },
+    {
+      "id": "desserts",
+      "name": "Postres",
+      "count": 25,
+      "subcategories": ["Pasteles", "Galletas", "Helados", "Tartas"]
+    },
+    {
+      "id": "mediterranean",
+      "name": "Mediterránea",
+      "count": 16,
+      "subcategories": ["Pescados", "Arroces", "Tapas", "Ensaladas"]
+    },
+    {
+      "id": "healthy",
+      "name": "Saludable",
+      "count": 22,
+      "subcategories": ["Sin Gluten", "Bajo en Calorías", "Keto", "Proteico"]
+    },
+    {
+      "id": "quick",
+      "name": "Rápidas",
+      "count": 30,
+      "subcategories": ["30 minutos", "One-pot", "Batch cooking", "Sin cocción"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "database": "my_database",
+  "collections": [
+    {
+      "name": "categories",
+      "fields": {
+        "id": { "type": "integer", "unique": true, "primary": true },
+        "name": { "type": "string"},
+        "count": { "type": "integer"},
+        "subcategories": { "type": "array", "items": { "type": "string"} }
+      }
+    }
+  ]
+}
