@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        const username = document.getElementById('username').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        console.log('Intento de inicio de sesión con:', { email, password });
+        console.log('Intento de inicio de sesión con:', { username, email, password });
         
         // Simulamos un inicio de sesión exitoso
         alert('¡Inicio de sesión exitoso!');
