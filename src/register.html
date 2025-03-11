@@ -22,10 +22,10 @@
             
             <form class="login-form">
                 <div class="form-group">
-                    <label for="email">Nombre de usuario</label>
+                    <label for="username">Nombre de usuario</label>
                     <div class="input-with-icon">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" placeholder="nombre_usuario" required>
+                        <input type="text" id="username" placeholder="nombre_usuario" required maxlength="30">
                     </div>
                 </div>
                 <div class="form-group">
@@ -40,14 +40,14 @@
                     <label for="password">Contraseña</label>
                     <div class="input-with-icon">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="password" placeholder="••••••••" required>
+                        <input type="password" id="password" placeholder="••••••••" required minlength="8">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="password">Repetir contraseña</label>
+                    <label for="confirm-password">Repetir contraseña</label>
                     <div class="input-with-icon">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="password" placeholder="••••••••" required>
+                        <input type="password" id="confirm-password" placeholder="••••••••" required>
                     </div>
                 </div>
 
@@ -68,6 +68,6 @@
 
     <footer></footer>
 
-    <script src="login.js"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 </html> 
