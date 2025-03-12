@@ -55,28 +55,6 @@ class CategoriesList {
 }
 
 // Inicialización cuando el DOM está listo
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const response = await fetch('/data/categories.json');
-        const data = await response.json();
-        
-        const categoriesList = document.querySelector('.categories-list');
-        
-        data.categories.forEach(category => {
-            const categoryElement = document.createElement('div');
-            categoryElement.className = 'category-item';
-            categoryElement.innerHTML = `
-                <input type="checkbox" 
-                       id="${category.id}" 
-                       ${category.isChecked ? 'checked' : ''}>
-                <label for="${category.id}">
-                    ${category.name}
-                    <span class="count">(${category.count})</span>
-                </label>
-            `;
-            categoriesList.appendChild(categoryElement);
-        });
-    } catch (error) {
-        console.error('Error cargando las categorías:', error);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const categoriesList = new CategoriesList('.categories-list');
 });
