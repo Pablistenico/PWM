@@ -131,7 +131,7 @@ class RecipeCard extends HTMLElement {
                 <div class="recipe-image">
                     <img src="${image}" alt="${alt}">
                     <div class="recipe-actions">
-                        <button class="edit-btn" href="../../pages/recipe-generator.html"><i class="fas fa-edit"></i></button>
+                        <button class="edit-btn" href="${window.baseUrl}/src/recipe-generator.html"><i class="fas fa-edit"></i></button>
                         <button class="delete-btn"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>

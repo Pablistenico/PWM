@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const recipeTitle = card.querySelector('h3').textContent;
             console.log('Ver receta:', recipeTitle);
-            // Aquí iría la navegación a la página de la receta
+
+            window.location.href = `${window.baseUrl}/src/recipe.html?title=${encodeURIComponent(recipeTitle)}`;
         });
     });
 }); 

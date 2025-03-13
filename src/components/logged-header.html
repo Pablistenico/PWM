@@ -1,0 +1,55 @@
+<header class="header">
+    <div class="brand">
+        <a href="#" onclick="window.location.href = window.baseUrl + '/index.html'; return false;"><h1>MealMates</h1></a>
+    </div>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#" onclick="window.location.href = window.baseUrl + '/src/blog.html'; return false;">Blog</a></li>
+            <li><a href="#" onclick="window.location.href = window.baseUrl + '/src/my-recipes.html'; return false;">Mis recetas</a></li>
+            <li><a href="#" onclick="window.location.href = window.baseUrl + '/src/weekly-planner.html'; return false;">Menú Semanal</a></li>
+        </ul>
+    </nav>
+    <div class="user-icon">
+        <div class="user-menu-container">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-menu">
+                <div class="user-menu-header">
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/login.html'; return false;" class="guest-text" style="display: none">Invitado</a>
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/profile.html'; return false;" class="user-text">Nombre_usuario</a>
+                </div>
+                <div class="user-menu-items guest-items" style="display: none">
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/login.html'; return false;" class="menu-item">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Iniciar sesión
+                    </a>
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/login.html#register'; return false;" class="menu-item">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarse
+                    </a>
+                </div>
+                <div class="user-menu-items user-items">
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/profile.html'; return false;" class="menu-item">
+                        <i class="fas fa-user-edit"></i>
+                        Mi perfil
+                    </a>
+                    <a href="#" onclick="window.location.href = window.baseUrl + '/src/weekly-planner.html'; return false;" class="menu-item">
+                        <i class="fas fa-calendar-week"></i>
+                        Planificador
+                    </a>
+                    <a href="#" onclick="logoutUser(); return false;" class="menu-item logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Cerrar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    function logoutUser() {
+        // Add logout logic here
+        // Then navigate to login page
+        window.location.href = window.baseUrl + '/src/login.html';
+    }
+</script>

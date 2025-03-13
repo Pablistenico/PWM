@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editButtons.forEach(button => {
         button.addEventListener('click', function() {
             const recipeId = this.closest('.recipe-card').dataset.id;
-            window.location.href = `/pages/recipe-generator.html?id=${recipeId}`;
+            window.location.href = `${window.baseUrl}/src/recipe-generator.html?id=${recipeId}`;
         });
     });
 

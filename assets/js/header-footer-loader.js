@@ -1,8 +1,17 @@
+if (window.location.hostname.includes('pablistenico.github.io')) {
+    // GitHub Pages environment
+    window.baseUrl = 'https://pablistenico.github.io/PWM';
+} else {
+    // Local development environment
+    window.baseUrl = '';
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const components = {
-        "lheader": "../components/logged-header.html",
-        "uheader": "../components/unlogged-header.html",
-        "footer": "../components/footer.html"
+        "lheader": `${window.baseUrl}/src/components/logged-header.html`,
+        "uheader": `${window.baseUrl}/src/components/unlogged-header.html`,
+        "footer": `${window.baseUrl}/src/components/footer.html`,
     };
 
     Object.keys(components).forEach(id => {
