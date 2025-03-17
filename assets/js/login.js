@@ -8,24 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
+        const errorMessage = document.getElementById('password-error'); 
         
         // Aquí normalmente irían las validaciones y la llamada al backend
-        if (username.length > 64) {
-            alert('El nombre de usuario no puede tener más de 64 caracteres.');
-            return;
-        }
-        
-        if (password.length < 8) {
-            alert('La contraseña debe tener al menos 8 caracteres.');
-            return;
-        }
 
         if (password !== confirmPassword) {
             alert('Las contraseñas no coinciden. Por favor, verifica.');
             return;
         }
 
-        console.log('Intento de inicio de sesión con:', { username, email, password });
+        console.log('Intento de inicio de sesión con:', { username, email, password, confirmPassword });
         
         // Simulamos un inicio de sesión exitoso
         alert('¡Inicio de sesión exitoso!');
