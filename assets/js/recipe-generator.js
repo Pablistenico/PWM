@@ -106,13 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
 
-        // Minlength validation
+        // Skip all other validations for number inputs - let HTML5 handle it
+        if (field.type === 'number') {
+            clearError(field);
+            return true;
+        }
+
+        // Minlength validation (skip for number inputs)
         if (field.minLength && !validators.minLength(field.value, field.minLength)) {
             showError(field, ERROR_MESSAGES.MIN_LENGTH(field.minLength));
             return false;
         }
 
-        // Maxlength validation
+        // Maxlength validation (skip for number inputs)
         if (field.maxLength && !validators.maxLength(field.value, field.maxLength)) {
             showError(field, ERROR_MESSAGES.MAX_LENGTH(field.maxLength));
             return false;
@@ -121,18 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Pattern validation
         if (field.pattern && !validators.pattern(field.value, new RegExp(field.pattern))) {
             showError(field, field.title || ERROR_MESSAGES.PATTERN);
-            return false;
-        }
-
-        // Min value validation for number inputs
-        if (field.type === 'number' && field.min && !validators.minValue(field.value, Number(field.min))) {
-            showError(field, ERROR_MESSAGES.MIN_VALUE(field.min));
-            return false;
-        }
-
-        // Max value validation for number inputs
-        if (field.type === 'number' && field.max && !validators.maxValue(field.value, Number(field.max))) {
-            showError(field, ERROR_MESSAGES.MAX_VALUE(field.max));
             return false;
         }
 
@@ -212,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate basic information fields
         const basicFields = [
             document.getElementById('title'),
-            document.getElementById('prepTime'),
             document.getElementById('difficulty'),
             document.getElementById('category'),
             document.getElementById('description')
@@ -224,6 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Get prepTime value for the recipe object later
+        const prepTimeField = document.getElementById('prepTime');
+        
         // Validate ingredients
         const ingredientItems = document.querySelectorAll('.ingredient-item');
         if (ingredientItems.length === 0) {
@@ -376,11 +372,17 @@ document.addEventListener('DOMContentLoaded', function() {
         imageUploadArea.style.display = 'block';
     });
 
-    // Add validation on blur for all initial fields
-    const allInputs = form.querySelectorAll('input, select, textarea');
-    allInputs.forEach(input => {
-        if (input.type !== 'file' && input.type !== 'button' && input.type !== 'submit') {
-            input.addEventListener('blur', function() {
+    // Add event listeners for validation
+    const fieldsToValidate = [
+        document.getElementById('title'),
+        document.getElementById('difficulty'),
+        document.getElementById('category'),
+        document.getElementById('description')
+    ];
+
+    fieldsToValidate.forEach(field => {
+        if (field) {
+            field.addEventListener('blur', function() {
                 validateField(this);
             });
         }
