@@ -1,20 +1,9 @@
 # 🍳 MealMates
 
-<div align="center">
-
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-025E8C?style=for-the-badge&logo=google-chrome&logoColor=white)](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
-[![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/b/your-board)
-
-Tu compañero perfecto para la cocina 🥘
-
-</div>
-
-## 📋 Tabla de Contenidos
+## Índice de Contenidos
 
 - [🍳 MealMates](#-mealmates)
+  - [Índice de Contenidos](#índice-de-contenidos)
   - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
   - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
     - [🎓 Asignatura](#-asignatura)
@@ -30,6 +19,58 @@ Tu compañero perfecto para la cocina 🥘
     - [Herramientas de Gestión](#herramientas-de-gestión)
     - [Ramas Git](#ramas-git)
   - [📝 Licencia](#-licencia)
+  - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
+    - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
+    - [2. Componetización con Web Components](#2-componetización-con-web-components)
+    - [3. Carga Dinámica de Contenido](#3-carga-dinámica-de-contenido)
+    - [4. Diseño Responsive](#4-diseño-responsive)
+    - [Capturas de Pantalla](#capturas-de-pantalla)
+      - [Vista de Escritorio](#vista-de-escritorio)
+      - [Vista Móvil](#vista-móvil)
+    - [Documentación Técnica](#documentación-técnica)
+  - [Próximos pasos](#próximos-pasos)
+
+<div align="center">
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Responsive](https://img.shields.io/badge/Responsive-025E8C?style=for-the-badge&logo=google-chrome&logoColor=white)](https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
+[![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/b/your-board)
+
+Tu compañero perfecto para la cocina 🥘
+
+</div>
+
+## 📋 Tabla de Contenidos
+
+- [🍳 MealMates](#-mealmates)
+  - [Índice de Contenidos](#índice-de-contenidos)
+  - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
+    - [🎓 Asignatura](#-asignatura)
+  - [🚀 Empezando](#-empezando)
+  - [🛠 Tecnologías](#-tecnologías)
+  - [✨ Características](#-características)
+  - [📁 Estructura](#-estructura)
+  - [👥 Equipo](#-equipo)
+    - [👨‍💻 Contribución](#-contribución)
+  - [📊 Organización](#-organización)
+    - [Metodología](#metodología)
+    - [Documentación](#documentación)
+    - [Herramientas de Gestión](#herramientas-de-gestión)
+    - [Ramas Git](#ramas-git)
+  - [📝 Licencia](#-licencia)
+  - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
+    - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
+    - [2. Componetización con Web Components](#2-componetización-con-web-components)
+    - [3. Carga Dinámica de Contenido](#3-carga-dinámica-de-contenido)
+    - [4. Diseño Responsive](#4-diseño-responsive)
+    - [Capturas de Pantalla](#capturas-de-pantalla)
+      - [Vista de Escritorio](#vista-de-escritorio)
+      - [Vista Móvil](#vista-móvil)
+    - [Documentación Técnica](#documentación-técnica)
+  - [Próximos pasos](#próximos-pasos)
 
 ## 🎯 Sobre el Proyecto
 
