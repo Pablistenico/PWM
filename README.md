@@ -180,3 +180,162 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 <div align="center">
 Hecho con ❤️ por el equipo de MealMates
 </div>
+
+## Sprint 2: Carga Dinámica y Diseño Responsive
+
+Durante el Sprint 2, hemos implementado las siguientes funcionalidades y mejoras técnicas:
+
+### 1. Estructura de Datos (JSON Schema)
+
+Hemos definido un esquema de datos robusto para la aplicación, que incluye las siguientes colecciones:
+
+```json
+{
+  "database": "my_database",
+  "collections": [
+    {
+      "name": "categories",
+      "fields": {
+        "id": { "type": "integer", "unique": true, "primary": true },
+        "name": { "type": "string"},
+        "count": { "type": "integer"},
+        "subcategories": { "type": "array", "items": { "type": "string"} }
+      }
+    },
+    {
+      "name": "recipes",
+      "fields": {
+        "id": { "type": "string", "unique": true, "primary": true },
+        "title": { "type": "string" },
+        "time": { "type": "string" },
+        "difficulty": { "type": "string", "enum": ["Fácil", "Medio", "Difícil"] },
+        "categories": { "type": "string" },
+        "image": { "type": "string" },
+        "alt": { "type": "string" }
+      }
+    },
+    {
+      "name": "weeklyPlan",
+      "fields": {
+        "day": { "type": "string", "enum": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"], "unique": true, "primary": true },
+        "recipeId": { "type": "string", "reference": "recipes.id" }
+      }
+    }
+  ]
+}
+```
+
+Este esquema permite organizar la información de las recetas, categorías y el plan semanal de manera estructurada y con validaciones apropiadas.
+
+### 2. Componetización con Web Components
+
+Hemos implementado Web Components para encapsular la lógica y presentación de elementos reutilizables, como las tarjetas de recetas:
+
+```javascript
+// Ejemplo simplificado de nuestro componente RecipeCard
+class RecipeCard extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+    }
+    
+    static get observedAttributes() {
+        return ["option", "title", "time", "difficulty", "categories", "image"];
+    }
+    
+    connectedCallback() {
+        this.render();
+    }
+    
+    render() {
+        // Lógica de renderizado aquí
+    }
+}
+
+customElements.define("recipe-card", RecipeCard);
+```
+
+### 3. Carga Dinámica de Contenido
+
+Implementamos la carga dinámica de recetas desde archivos JSON utilizando la API Fetch:
+
+```javascript
+class WeeklyPlanner {
+    constructor() {
+        this.planner = {};
+        this.recipes = [];
+        this.daysGrid = document.querySelector('.days-grid');
+        this.init();
+    }
+
+    async init() {
+        await this.loadRecipesData();
+        this.render();
+    }
+
+    async loadRecipesData() {
+        try {
+            const response = await fetch('../data/recipes.json');
+            const data = await response.json();
+            this.recipes = data.recipes;
+            this.planner = data.weeklyPlan;
+        } catch (error) {
+            console.error('Error loading recipes:', error);
+        }
+    }
+    
+    // Método para renderizar el contenido
+    render() {
+        // Lógica de renderizado
+    }
+}
+```
+
+### 4. Diseño Responsive
+
+Hemos implementado un diseño completamente responsive utilizando Grid Layout y Media Queries:
+
+```css
+/* Grid Layout para la cuadrícula de días */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Media queries para adaptación a diferentes dispositivos */
+@media (max-width: 768px) {
+    .planner-container {
+        padding: 1rem;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+### Capturas de Pantalla
+
+#### Vista de Escritorio
+![Vista de Escritorio](https://via.placeholder.com/800x450?text=Vista+de+Escritorio)
+
+#### Vista Móvil
+![Vista Móvil](https://via.placeholder.com/300x600?text=Vista+Móvil)
+
+### Documentación Técnica
+
+Se ha creado documentación técnica detallada sobre los componentes web, carga dinámica y diseño responsive en el archivo [webcomponents-docs.md](docs/webcomponents-docs.md).
+
+## Próximos pasos
+
+Para el Sprint 3, nos enfocaremos en:
+
+- Implementación de filtros avanzados para las recetas
+- Funcionalidad de búsqueda
+- Persistencia de datos en el navegador
+- Mejoras en la interfaz de usuario
+
+---
+
+© 2023 MealMates - Proyecto Desarrollado para la Asignatura de Programación Web y Móvil
