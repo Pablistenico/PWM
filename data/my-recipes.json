@@ -1,0 +1,20 @@
+{
+    "myRecipes": [
+        {
+            "option": "saved",
+            "title": "Arroz 3 delicias",
+            "time": "50 min",
+            "difficulty": "Medio",
+            "categories": ["Arroces", "Chino"],
+            "image": "https://picsum.photos/seed/food3/400/300"
+        },
+        {
+            "option": "saved",
+            "title": "Sandwich mixto",
+            "time": "5 min",
+            "difficulty": "Fácil",
+            "categories": ["Desayuno", "Rápido"],
+            "image": "https://picsum.photos/seed/food4/400/300"
+        }
+    ]
+}
