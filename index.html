@@ -20,14 +20,48 @@
 
     <section class="featured-recipes">
         <h2>Recetas destacadas</h2>
-        <div class="carousel-container">
-            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="recipe-grid">
+            <article class="recipe-card">
+                <div class="recipe-image">
+                    <img src="https://picsum.photos/seed/food1/400/300" alt="Pasta Mediterránea">
+                </div>
+                <div class="recipe-content">
+                    <h3>Pasta Mediterránea</h3>
+                    <p>Una deliciosa pasta con ingredientes frescos del Mediterráneo, perfecta para una cena ligera y sabrosa.</p>
+                    <div class="recipe-categories">
+                        <span>Italiana</span>
+                        <span>Pasta</span>
+                        <span>Saludable</span>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/food2/30/30" alt="Chef María">
+                            <span>Chef María</span>
+                        </div>
+                    </div>
+                    <button class="recipe-button">Ver receta</button>
+                </div>
+            </article>
+
+
+
+
+
+
             <div class="carousel">
                 <div class="carousel-track">
-                    <div class="recipe-card">
+                    <article class="recipe-blog-card">
                         <div class="recipe-image">
                             <img src="https://picsum.photos/seed/pasta/300/200" alt="Pasta Carbonara">
                         </div>
+                        <div class="recipe"></div>
                         <h3>Pasta Carbonara</h3>
                         <p>Una deliciosa receta italiana tradicional con huevo, queso y panceta.</p>
                         <div class="rating">
@@ -38,7 +72,7 @@
                             <i class="far fa-star"></i>
                         </div>
                         <button class="recipe-button" onclick="window.location.href='/src/recipe.html'">Ver receta</button>
-                    </div>
+                    </article>
                     <div class="recipe-card">
                         <div class="recipe-image">
                             <img src="https://picsum.photos/seed/salad/300/200" alt="Ensalada César">
@@ -52,7 +86,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <button class="recipe-button" onclick="window.location.href='/src/recipe.html'">Ver receta</button>
+                        <button class="recipe-button">Ver receta</button>
                     </div>
                     <div class="recipe-card">
                         <div class="recipe-image">
@@ -67,11 +101,10 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <button class="recipe-button" onclick="window.location.href='/src/recipe.html'">Ver receta</button>
+                        <button class="recipe-button">Ver receta</button>
                     </div>
                 </div>
             </div>
-            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
         </div>
         <button class="primary-button" onclick="window.location.href='src/blog.html'">Ver Blog</button>
     </section>

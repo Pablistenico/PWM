@@ -101,15 +101,27 @@ body {
 
 .carousel {
     overflow: hidden;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.3s ease;
+    align-items: center;
+    justify-items: center;
     gap: 2rem;
 }
 
 .recipe-card {
+    flex: 0 0 300px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.recipe-blog-card {
     flex: 0 0 300px;
     background: var(--white);
     border-radius: 10px;
@@ -271,7 +283,7 @@ body {
     color: var(--black);
     font-weight: 500;
 }
-    
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navigation {
@@ -378,7 +390,7 @@ body {
 
 .menu-item.logout:hover {
     background-color: #fee;
-} 
+}
 
 .tab {
     display: flex;
