@@ -52,11 +52,14 @@ class MyRecipesList {
     }
 }
 
-// Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.querySelector('.tablink.active').click();
-    }, 100);
+    const activeTab = document.querySelector('.tab-content.active');
+    if (activeTab) {
+        activeTab.style.display = 'none';
+        void activeTab.offsetHeight;
+        activeTab.style.display = 'flex';
+    }
     new MyRecipesList('#my-recipes .my-recipes-list', 'created');
     new MyRecipesList('#saved-recipes .my-recipes-list', 'saved');
-}); 
+});
+
