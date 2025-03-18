@@ -59,4 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
     new MyRecipesList('#my-recipes .my-recipes-list', 'created');
     new MyRecipesList('#saved-recipes .my-recipes-list', 'saved');
-});
+}); 
