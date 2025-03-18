@@ -127,6 +127,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     padding: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .recipe-image img {
@@ -426,4 +428,11 @@ body {
     opacity: 1;
     visibility: visible;
     position: relative;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
