@@ -20,58 +20,91 @@
 
     <section class="featured-recipes">
         <h2>Recetas destacadas</h2>
-        <div class="carousel-container">
-            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="carousel">
-                <div class="carousel-track">
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/pasta/300/200" alt="Pasta Carbonara">
-                        </div>
-                        <h3>Pasta Carbonara</h3>
-                        <p>Una deliciosa receta italiana tradicional con huevo, queso y panceta.</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <button class="recipe-button" onclick="window.location.href='/src/recipe.html'">Ver receta</button>
-                    </div>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/salad/300/200" alt="Ensalada César">
-                        </div>
-                        <h3>Ensalada César</h3>
-                        <p>Fresca y crujiente ensalada con pollo, crutones y aderezo especial.</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <button class="recipe-button" onclick="window.location.href='/src/recipe.html'">Ver receta</button>
-                    </div>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/tacos/300/200" alt="Tacos al Pastor">
-                        </div>
-                        <h3>Tacos al Pastor</h3>
-                        <p>Auténticos tacos mexicanos con carne marinada y piña fresca.</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
+        <div class="recipe-grid">
+            <article class="recipe-blog-card">
+                <div class="recipe-image">
+                    <img src="https://picsum.photos/seed/food1/400/300" alt="Pasta Mediterránea">
                 </div>
-            </div>
-            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                <div class="recipe-content">
+                    <h3>Pasta Mediterránea</h3>
+                    <p>Una deliciosa pasta con ingredientes frescos del Mediterráneo, perfecta para una cena ligera y sabrosa.</p>
+                    <div class="recipe-categories">
+                        <span>Italiana</span>
+                        <span>Pasta</span>
+                        <span>Saludable</span>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/food1/30/30" alt="Chef María">
+                            <span>Chef María</span>
+                        </div>
+                    </div>
+                    <button class="recipe-button">Ver receta</button>
+                </div>
+            </article>
+            <article class="recipe-blog-card">
+                <div class="recipe-image">
+                    <img src="https://picsum.photos/seed/pasta/300/200" alt="Pasta Mediterránea">
+                </div>
+                <div class="recipe-content">
+                    <h3>Pasta Carbonara</h3>
+                    <p>Una deliciosa receta italiana tradicional con huevo, queso y panceta.</p>
+                    <div class="recipe-categories">
+                        <span>Italiana</span>
+                        <span>Pasta</span>
+                        <span>Saludable</span>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/food2/30/30" alt="Chef María">
+                            <span>Chef Pepe</span>
+                        </div>
+                    </div>
+                    <button class="recipe-button">Ver receta</button>
+                </div>
+            </article>
+            <article class="recipe-blog-card">
+                <div class="recipe-image">
+                    <img src="https://picsum.photos/seed/tacos/300/200" alt="Tacos de Pescado">
+                </div>
+                <div class="recipe-content">
+                    <h3>Tacos de Pescado</h3>
+                    <p>Tacos de pescado estilo Baja California con col morada y salsa de chipotle. Una explosión de sabores mexicanos.</p>
+                    <div class="recipe-categories">
+                        <span>Mexicana</span>
+                        <span>Pescado</span>
+                        <span>Picante</span>
+                    </div>
+                    <div class="recipe-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="author">
+                            <img src="https://picsum.photos/seed/food3/30/30" alt="Chef María">
+                            <span>Chef Ana</span>
+                        </div>
+                    </div>
+                    <button class="recipe-button">Ver receta</button>
+                </div>
+            </article> 
         </div>
         <button class="primary-button" onclick="window.location.href='/src/blog.html'">Ver Blog</button>
     </section>
