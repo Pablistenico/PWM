@@ -101,11 +101,15 @@ body {
 
 .carousel {
     overflow: hidden;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.3s ease;
+    align-items: center;
+    justify-items: center;
     gap: 2rem;
 }
 
@@ -115,6 +119,16 @@ body {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     padding: 1rem;
+}
+
+.recipe-blog-card {
+    flex: 0 0 300px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .recipe-image img {
@@ -271,7 +285,7 @@ body {
     color: var(--black);
     font-weight: 500;
 }
-    
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navigation {
@@ -378,7 +392,7 @@ body {
 
 .menu-item.logout:hover {
     background-color: #fee;
-} 
+}
 
 .tab {
     display: flex;
@@ -414,4 +428,11 @@ body {
     opacity: 1;
     visibility: visible;
     position: relative;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
