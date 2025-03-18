@@ -1,12 +1,28 @@
 {
     "myRecipes": [
         {
+            "option": "created",
+            "title": "Pasta Mediterránea",
+            "time": "30 min",
+            "difficulty": "Fácil",
+            "categories": ["Italiana", "Pasta"],
+            "image": "https://www.cocinavital.mx/wp-content/uploads/2018/03/pasta_mediterranea.jpg"
+        },
+        {
+            "option": "created",
+            "title": "Ensalada César",
+            "time": "15 min",
+            "difficulty": "Difícil",
+            "categories": ["Ensalada", "Saludable"],
+            "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/b89f8de9-0f93-4976-b318-9ab04db353bc/Derivates/d3a08a3c-abb2-452e-9121-168f67c992c8.jpg"
+        },
+        {
             "option": "saved",
             "title": "Arroz 3 delicias",
             "time": "50 min",
             "difficulty": "Medio",
             "categories": ["Arroces", "Chino"],
-            "image": "https://picsum.photos/seed/food3/400/300"
+            "image": "https://comedera.com/wp-content/uploads/sites/9/2014/03/arroz-tres-delicias.jpg?w=1200"
         },
         {
             "option": "saved",
@@ -14,7 +30,7 @@
             "time": "5 min",
             "difficulty": "Fácil",
             "categories": ["Desayuno", "Rápido"],
-            "image": "https://picsum.photos/seed/food4/400/300"
+            "image": "https://i.pinimg.com/736x/ec/a8/54/eca854f94b97902686a36fe34397c523.jpg"
         }
     ]
 }

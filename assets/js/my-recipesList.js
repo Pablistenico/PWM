@@ -1,6 +1,7 @@
 class MyRecipesList {
-    constructor(containerId) {
+    constructor(containerId, option) {
         this.container = document.querySelector(containerId);
+        this.option = option;
         this.myRecipes = [];
         this.init();
     }
@@ -15,7 +16,7 @@ class MyRecipesList {
         try {
             const response = await fetch('../data/my-recipes.json');
             const data = await response.json();
-            this.myRecipes = data.myRecipes;
+            this.myRecipes = data.myRecipes.filter(recipe => recipe.option === this.option);
         } catch (error) {
             console.error('Error cargando recetas:', error);
             this.myRecipes = [];
@@ -53,5 +54,9 @@ class MyRecipesList {
 
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', () => {
-    new MyRecipesList('.my-recipes-list');
+    setTimeout(() => {
+        document.querySelector('.tablink.active').click();
+    }, 100);
+    new MyRecipesList('#my-recipes .my-recipes-list', 'created');
+    new MyRecipesList('#saved-recipes .my-recipes-list', 'saved');
 });

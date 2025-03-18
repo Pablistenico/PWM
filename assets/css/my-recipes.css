@@ -145,12 +145,18 @@
     color: #666;
 }
 
+.my-recipes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 @media (max-width: 768px) {
     .recipes-container {
         padding: 1rem;
     }
 
     .recipes-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
-} 
+}
