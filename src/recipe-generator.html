@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MealMates - Generador de Recetas</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">    
     <link rel="stylesheet" href="../assets/css/recipe-generator.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="../assets/js/header-footer-loader.js"></script>
@@ -21,33 +21,67 @@
             <div class="form-section">
                 <h2>Información Básica</h2>
                 <div class="form-group">
-                    <label for="title">Título de la Receta</label>
-                    <input type="text" id="title" required placeholder="Ej: Pasta Mediterránea">
+                    <label for="title">Título de la Receta <span class="required">*</span></label>
+                    <input type="text" id="title" name="title" required 
+                           minlength="5" maxlength="100" 
+                           pattern="^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-\,\.]+$"
+                           placeholder="Ej: Pasta Mediterránea"
+                           title="El título debe tener entre 5 y 100 caracteres y solo puede contener letras, números, espacios y algunos signos de puntuación">
+                    <div class="error-message" id="title-error"></div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="prepTime">Tiempo (minutos)</label>
-                        <input type="number" id="prepTime" min="1" required>
+                        <label for="prepTime">Tiempo (minutos) <span class="required">*</span></label>
+                        <input type="number" id="prepTime" name="prepTime" 
+                               required min="1" max="1440" step="1"
+                               title="El tiempo debe estar entre 1 y 1440 minutos (24 horas)">
                     </div>
                     <div class="form-group">
-                        <label for="difficulty">Dificultad</label>
-                        <select id="difficulty" required>
+                        <label for="difficulty">Dificultad <span class="required">*</span></label>
+                        <select id="difficulty" name="difficulty" required>
+                            <option value="">Selecciona una opción</option>
                             <option value="easy">Fácil</option>
                             <option value="medium">Media</option>
                             <option value="hard">Difícil</option>
                         </select>
+                        <div class="error-message" id="difficulty-error"></div>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="category">Categoría <span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="appetizer">Entrante</option>
+                        <option value="main">Plato principal</option>
+                        <option value="dessert">Postre</option>
+                        <option value="drink">Bebida</option>
+                        <option value="snack">Aperitivo</option>
+                    </select>
+                    <div class="error-message" id="category-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción <span class="required">*</span></label>
+                    <textarea id="description" name="description" 
+                              required minlength="20" maxlength="500"
+                              placeholder="Breve descripción de la receta..."
+                              title="La descripción debe tener entre 20 y 500 caracteres"></textarea>
+                    <div class="error-message" id="description-error"></div>
                 </div>
             </div>
 
             <div class="form-section">
-                <h2>Ingredientes</h2>
+                <h2>Ingredientes <span class="required">*</span></h2>
                 <div class="form-group ingredients-section">
                     <div class="ingredients-list" id="ingredientsList">
                         <div class="ingredient-item">
-                            <input type="text" placeholder="Ingrediente" required>
-                            <input type="text" placeholder="Cantidad" required>
+                            <input type="text" name="ingredient[]" placeholder="Ingrediente" 
+                                   required pattern="^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s\-\,\.]+$"
+                                   title="Solo puede contener letras, números, espacios y algunos signos de puntuación">
+                            <input type="text" name="quantity[]" placeholder="Cantidad" 
+                                   required pattern="^[0-9]+(\.[0-9]+)?\s*[A-Za-zÀ-ÖØ-öø-ÿ\s]*$"
+                                   title="Formato válido: número seguido opcionalmente de unidad (ej: 200 g, 2 cucharadas)">
                             <button type="button" class="remove-btn">×</button>
+                            <div class="error-message ingredient-error"></div>
                         </div>
                     </div>
                     <button type="button" class="add-ingredient" id="addIngredient">
@@ -57,13 +91,16 @@
             </div>
 
             <div class="form-section">
-                <h2>Preparación</h2>
+                <h2>Preparación <span class="required">*</span></h2>
                 <div class="form-group steps-section">
                     <div class="steps-list" id="stepsList">
                         <div class="step-item">
                             <span class="step-number">1</span>
-                            <textarea required placeholder="Describe el paso..."></textarea>
+                            <textarea name="step[]" required minlength="10" 
+                                      placeholder="Describe el paso..."
+                                      title="Cada paso debe tener al menos 10 caracteres"></textarea>
                             <button type="button" class="remove-btn">×</button>
+                            <div class="error-message step-error"></div>
                         </div>
                     </div>
                     <button type="button" class="add-step" id="addStep">
@@ -73,15 +110,22 @@
             </div>
 
             <div class="form-group image-section">
-                <label for="recipeImage">Imagen de la Receta</label>
+                <label for="recipeImage">Imagen de la Receta <span class="required">*</span></label>
                 <div class="image-upload-area" id="imageUploadArea">
-                    <input type="file" id="recipeImage" accept="image/*" hidden>
+                    <input type="file" id="recipeImage" name="recipeImage" 
+                           accept="image/jpeg, image/png, image/webp" required hidden>
                     <i class="fas fa-image"></i>
-                    <p>Seleccionar imagen</p>
+                    <p>Seleccionar imagen (JPG, PNG o WebP)</p>
+                    <div class="error-message" id="recipeImage-error"></div>
+                </div>
+                <div class="image-preview" id="imagePreview" style="display: none;">
+                    <img src="#" alt="Vista previa" id="previewImg">
+                    <button type="button" class="remove-image" id="removeImage">×</button>
                 </div>
             </div>
 
             <div class="form-actions">
+                <button type="button" id="cancelButton" class="cancel-button" onclick="navigateTo('src/my-recipes.html')">Cancelar</button>
                 <button type="submit" class="save-button">Guardar Receta</button>
             </div>
         </form>

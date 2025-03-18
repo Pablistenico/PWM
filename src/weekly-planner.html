@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../assets/css/weekly-planner.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="../assets/js/header-footer-loader.js"></script>
+    <script defer src="../assets/js/recipe-card.js"></script>
+    <script defer src="../assets/js/weekly-planner.js"></script>
 </head>
 <body>
     <lheader></lheader>
@@ -18,16 +20,16 @@
             <div class="filters-grid">
                 <div class="filter-group">
                     <label>Tipo de dieta</label>
-                    <select>
+                    <select name="diet-type">
                         <option value="">Todas</option>
-                        <option value="vegetarian">Vegetariana</option>
-                        <option value="vegan">Vegana</option>
-                        <option value="gluten-free">Sin gluten</option>
+                        <option value="vegetariana">Vegetariana</option>
+                        <option value="vegana">Vegana</option>
+                        <option value="sin gluten">Sin gluten</option>
                     </select>
                 </div>
                 <div class="filter-group">
                     <label>Tiempo de preparación</label>
-                    <select>
+                    <select name="prep-time">
                         <option value="">Cualquiera</option>
                         <option value="15">15 minutos</option>
                         <option value="30">30 minutos</option>
@@ -36,11 +38,11 @@
                 </div>
                 <div class="filter-group">
                     <label>Dificultad</label>
-                    <select>
+                    <select name="difficulty">
                         <option value="">Todas</option>
-                        <option value="easy">Fácil</option>
-                        <option value="medium">Media</option>
-                        <option value="hard">Difícil</option>
+                        <option value="fácil">Fácil</option>
+                        <option value="medio">Media</option>
+                        <option value="difícil">Difícil</option>
                     </select>
                 </div>
             </div>
@@ -48,127 +50,13 @@
 
         <section class="weekly-menu">
             <div class="days-grid">
-                <div class="day-card">
-                    <h3>Lunes</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/pasta/300/200" alt="Pasta Primavera">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Pasta Primavera</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 30 min</p>
-                        <div class="recipe-categories">
-                            <span>Vegetariana</span>
-                            <span>Pasta</span>
-                            <span>Fácil</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Martes</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/salmon/300/200" alt="Salmón al Horno">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Salmón al Horno</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 25 min</p>
-                        <div class="recipe-categories">
-                            <span>Pescado</span>
-                            <span>Saludable</span>
-                            <span>Sin Gluten</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Miércoles</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/curry/300/200" alt="Curry de Garbanzos">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Curry de Garbanzos</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 40 min</p>
-                        <div class="recipe-categories">
-                            <span>Vegana</span>
-                            <span>India</span>
-                            <span>Especiada</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Jueves</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/chicken/300/200" alt="Pollo al Limón">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Pollo al Limón</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 35 min</p>
-                        <div class="recipe-categories">
-                            <span>Pollo</span>
-                            <span>Bajo en Calorías</span>
-                            <span>Mediterránea</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Viernes</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/quinoa/300/200" alt="Bowl de Quinoa">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Bowl de Quinoa</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 20 min</p>
-                        <div class="recipe-categories">
-                            <span>Vegetariana</span>
-                            <span>Bowl</span>
-                            <span>Proteína</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Sábado</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/pizza/300/200" alt="Pizza Casera">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Pizza Casera</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 45 min</p>
-                        <div class="recipe-categories">
-                            <span>Italiana</span>
-                            <span>Masa</span>
-                            <span>Familiar</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
-                </div>
-                <div class="day-card">
-                    <h3>Domingo</h3>
-                    <div class="recipe-card">
-                        <div class="recipe-image">
-                            <img src="https://picsum.photos/seed/paella/300/200" alt="Paella de Verduras">
-                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                        </div>
-                        <h4>Paella de Verduras</h4>
-                        <p class="recipe-time"><i class="far fa-clock"></i> 50 min</p>
-                        <div class="recipe-categories">
-                            <span>Española</span>
-                            <span>Arroz</span>
-                            <span>Tradicional</span>
-                        </div>
-                        <button class="recipe-button">Ver receta</button>
-                    </div>
+                <!-- Los días de la semana y sus recetas se cargarán dinámicamente -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Cargando planificador...</p>
                 </div>
             </div>
-            <button href="/src/recipe-generator.html" class="generate-button">Generar receta</button>
+            <a href="./recipe-generator.html" class="generate-button">Generar receta</a>
         </section>
     </main>
 

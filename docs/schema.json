@@ -9,6 +9,25 @@
         "count": { "type": "integer"},
         "subcategories": { "type": "array", "items": { "type": "string"} }
       }
+    },
+    {
+      "name": "recipes",
+      "fields": {
+        "id": { "type": "string", "unique": true, "primary": true },
+        "title": { "type": "string" },
+        "time": { "type": "string" },
+        "difficulty": { "type": "string", "enum": ["Fácil", "Medio", "Difícil"] },
+        "categories": { "type": "string" },
+        "image": { "type": "string" },
+        "alt": { "type": "string" }
+      }
+    },
+    {
+      "name": "weeklyPlan",
+      "fields": {
+        "day": { "type": "string", "enum": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"], "unique": true, "primary": true },
+        "recipeId": { "type": "string", "reference": "recipes.id" }
+      }
     }
   ]
 }
