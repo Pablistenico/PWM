@@ -17,9 +17,10 @@
         "title": { "type": "string" },
         "time": { "type": "string" },
         "difficulty": { "type": "string", "enum": ["Fácil", "Medio", "Difícil"] },
-        "categories": { "type": "string" },
+        "categories": { "type": "array", "items": { "type": "string" } },
         "image": { "type": "string" },
-        "alt": { "type": "string" }
+        "alt": { "type": "string" },
+        "option": { "type": "string", "enum": ["created", "saved"], "required": false }
       }
     },
     {
