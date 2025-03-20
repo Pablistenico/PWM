@@ -16,7 +16,7 @@ class MyRecipesList {
         try {
             const response = await fetch('../data/recipes.json');
             const data = await response.json();
-            this.myRecipes = data.myRecipes.filter(recipe => recipe.option === this.option);
+            this.myRecipes = data.recipes.filter(recipe => recipe.option === this.option);
         } catch (error) {
             console.error('Error cargando recetas:', error);
             this.myRecipes = [];
