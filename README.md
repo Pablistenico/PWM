@@ -7,7 +7,7 @@
   - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
   - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
     - [🎓 Asignatura](#-asignatura)
-  - [🚀 Empezando](#-empezando)
+  - [Sprint 1: Empezando](#sprint-1-empezando)
   - [🛠 Tecnologías](#-tecnologías)
   - [✨ Características](#-características)
   - [📁 Estructura](#-estructura)
@@ -15,10 +15,8 @@
     - [👨‍💻 Contribución](#-contribución)
   - [📊 Organización](#-organización)
     - [Metodología](#metodología)
-    - [Documentación](#documentación)
     - [Herramientas de Gestión](#herramientas-de-gestión)
     - [Ramas Git](#ramas-git)
-  - [📝 Licencia](#-licencia)
   - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
     - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
     - [2. Componetización con Web Components](#2-componetización-con-web-components)
@@ -27,8 +25,7 @@
     - [Capturas de Pantalla](#capturas-de-pantalla)
       - [Vista de Escritorio](#vista-de-escritorio)
       - [Vista Móvil](#vista-móvil)
-    - [Documentación Técnica](#documentación-técnica)
-  - [Próximos pasos](#próximos-pasos)
+    - [Documentación](#documentación)
 
 <div align="center">
 
@@ -49,7 +46,7 @@ Tu compañero perfecto para la cocina 🥘
   - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
   - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
     - [🎓 Asignatura](#-asignatura)
-  - [🚀 Empezando](#-empezando)
+  - [Sprint 1: Empezando](#sprint-1-empezando)
   - [🛠 Tecnologías](#-tecnologías)
   - [✨ Características](#-características)
   - [📁 Estructura](#-estructura)
@@ -57,10 +54,8 @@ Tu compañero perfecto para la cocina 🥘
     - [👨‍💻 Contribución](#-contribución)
   - [📊 Organización](#-organización)
     - [Metodología](#metodología)
-    - [Documentación](#documentación)
     - [Herramientas de Gestión](#herramientas-de-gestión)
     - [Ramas Git](#ramas-git)
-  - [📝 Licencia](#-licencia)
   - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
     - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
     - [2. Componetización con Web Components](#2-componetización-con-web-components)
@@ -69,8 +64,7 @@ Tu compañero perfecto para la cocina 🥘
     - [Capturas de Pantalla](#capturas-de-pantalla)
       - [Vista de Escritorio](#vista-de-escritorio)
       - [Vista Móvil](#vista-móvil)
-    - [Documentación Técnica](#documentación-técnica)
-  - [Próximos pasos](#próximos-pasos)
+    - [Documentación](#documentación)
 
 ## 🎯 Sobre el Proyecto
 
@@ -84,7 +78,7 @@ Nuestro enfoque combina una experiencia de usuario atractiva con funcionalidades
 - **Grado**: Ingeniería Informática
 - **Universidad**: Universidad de Las Palmas de Gran Canaria
 
-## 🚀 Empezando
+## Sprint 1: Empezando
 
 Para ejecutar este proyecto localmente:
 
@@ -194,11 +188,6 @@ Para contribuir al proyecto:
 - Desarrollo iterativo e incremental
 - Reuniones semanales de seguimiento
 - Control de versiones con Git
-
-### Documentación
-- [Requisitos del proyecto PWM](./Requisitos%20del%20proyecto%20PWM.pdf): Documento de requisitos y especificaciones del proyecto
-- [Meal Mates Mockups](./Meal%20Mates%20Mockups.pdf): Diseños y mockups de la interfaz de usuario
-- [Presentación Sprint 1](./presentation-sprint-1.pdf): Primera presentación del proyecto con avances iniciales y planificación
   
 ### Herramientas de Gestión
 - **Trello**: [Enlace al tablero](https://trello.com/b/A9OGJGil/pwm)
@@ -209,18 +198,8 @@ Para contribuir al proyecto:
 ### Ramas Git
 - `main`: Código en producción
 - `develop`: Desarrollo activo
-- `feature/*`: Nuevas características
-- `hotfix/*`: Correcciones urgentes
-
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ---
-
-<div align="center">
-Hecho con ❤️ por el equipo de MealMates
-</div>
 
 ## Sprint 2: Carga Dinámica y Diseño Responsive
 
@@ -364,19 +343,12 @@ Hemos implementado un diseño completamente responsive utilizando Grid Layout y 
 #### Vista Móvil
 ![Vista Móvil](https://via.placeholder.com/300x600?text=Vista+Móvil)
 
-### Documentación Técnica
-
-Se ha creado documentación técnica detallada sobre los componentes web, carga dinámica y diseño responsive en el archivo [webcomponents-docs.md](docs/webcomponents-docs.md).
-
-## Próximos pasos
-
-Para el Sprint 3, nos enfocaremos en:
-
-- Implementación de filtros avanzados para las recetas
-- Funcionalidad de búsqueda
-- Persistencia de datos en el navegador
-- Mejoras en la interfaz de usuario
-
+### Documentación
+- [Requisitos del proyecto PWM](./Requisitos%20del%20proyecto%20PWM.pdf): Documento de requisitos y especificaciones del proyecto
+- [Meal Mates Mockups](./Meal%20Mates%20Mockups.pdf): Diseños y mockups de la interfaz de usuario
+- [Presentación Sprint 1](./presentation-sprint-1.pdf): Primera presentación del proyecto con avances iniciales y planificación
+- [Web Components Docs](./docs/webcomponents-docs.md): Documentación técnica sobre la implementación de Web Components
+- [Form Validation Docs](./docs/form-validation-docs.md): Documentación sobre la validación de formularios con HTML5 y JavaScript
 ---
 
 © 2023 MealMates - Proyecto Desarrollado para la Asignatura de Programación Web y Móvil
