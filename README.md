@@ -24,7 +24,7 @@
     - [Capturas de Pantalla](#capturas-de-pantalla)
       - [Vista de Escritorio](#vista-de-escritorio)
       - [Vista Móvil](#vista-móvil)
-    - [Documentación](#documentación)
+  - [Documentación](#documentación)
 
 <div align="center">
 
@@ -62,7 +62,7 @@ Tu compañero perfecto para la cocina 🥘
     - [Capturas de Pantalla](#capturas-de-pantalla)
       - [Vista de Escritorio](#vista-de-escritorio)
       - [Vista Móvil](#vista-móvil)
-    - [Documentación](#documentación)
+  - [Documentación](#documentación)
 
 ## 🎯 Sobre el Proyecto
 
@@ -348,7 +348,7 @@ Hemos implementado un diseño completamente responsive utilizando Grid Layout y 
 #### Vista Móvil
 ![Vista Móvil](https://via.placeholder.com/300x600?text=Vista+Móvil)
 
-### Documentación
+## Documentación
 - [Requisitos del proyecto PWM](./Requisitos%20del%20proyecto%20PWM.pdf): Documento de requisitos y especificaciones del proyecto
 - [Meal Mates Mockups](./Meal%20Mates%20Mockups.pdf): Diseños y mockups de la interfaz de usuario
 - [Presentación Sprint 1](./presentation-sprint-1.pdf): Primera presentación del proyecto con avances iniciales y planificación
