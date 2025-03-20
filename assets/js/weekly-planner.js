@@ -54,7 +54,7 @@ class WeeklyPlanner {
                         title="${recipe.title}" 
                         time="${recipe.time}" 
                         difficulty="${recipe.difficulty}" 
-                        categories="${recipe.categories}" 
+                        categories="${recipe.categories.join(', ')}"
                         image="${recipe.image}" 
                         alt="${recipe.alt}"
                         day="${day}">
@@ -79,7 +79,7 @@ class WeeklyPlanner {
 
         // Filter recipes based on selected criteria
         const filteredRecipes = this.recipes.filter(recipe => {
-            if (dietType && !recipe.categories.toLowerCase().includes(dietType.toLowerCase())) {
+            if (dietType && !recipe.categories.join(', ').toLowerCase().includes(dietType.toLowerCase())) {
                 return false;
             }
             

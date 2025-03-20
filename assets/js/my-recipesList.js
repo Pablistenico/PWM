@@ -14,7 +14,7 @@ class MyRecipesList {
 
     async loadMyRecipes() {
         try {
-            const response = await fetch('../data/my-recipes.json');
+            const response = await fetch('../data/recipes.json');
             const data = await response.json();
             this.myRecipes = data.myRecipes.filter(recipe => recipe.option === this.option);
         } catch (error) {
@@ -62,4 +62,3 @@ document.addEventListener('DOMContentLoaded', () => {
     new MyRecipesList('#my-recipes .my-recipes-list', 'created');
     new MyRecipesList('#saved-recipes .my-recipes-list', 'saved');
 });
-
