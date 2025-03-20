@@ -8,15 +8,14 @@
   - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
     - [🎓 Asignatura](#-asignatura)
   - [Sprint 1: Empezando](#sprint-1-empezando)
-  - [🛠 Tecnologías](#-tecnologías)
-  - [✨ Características](#-características)
-  - [📁 Estructura](#-estructura)
-  - [👥 Equipo](#-equipo)
+    - [🛠 Tecnologías](#-tecnologías)
+    - [✨ Características](#-características)
+    - [📁 Estructura](#-estructura)
+    - [👥 Equipo](#-equipo)
     - [👨‍💻 Contribución](#-contribución)
-  - [📊 Organización](#-organización)
-    - [Metodología](#metodología)
-    - [Herramientas de Gestión](#herramientas-de-gestión)
-    - [Ramas Git](#ramas-git)
+    - [📊 Organización](#-organización)
+      - [Metodología](#metodología)
+      - [Herramientas de Gestión](#herramientas-de-gestión)
   - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
     - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
     - [2. Componetización con Web Components](#2-componetización-con-web-components)
@@ -47,15 +46,14 @@ Tu compañero perfecto para la cocina 🥘
   - [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
     - [🎓 Asignatura](#-asignatura)
   - [Sprint 1: Empezando](#sprint-1-empezando)
-  - [🛠 Tecnologías](#-tecnologías)
-  - [✨ Características](#-características)
-  - [📁 Estructura](#-estructura)
-  - [👥 Equipo](#-equipo)
+    - [🛠 Tecnologías](#-tecnologías)
+    - [✨ Características](#-características)
+    - [📁 Estructura](#-estructura)
+    - [👥 Equipo](#-equipo)
     - [👨‍💻 Contribución](#-contribución)
-  - [📊 Organización](#-organización)
-    - [Metodología](#metodología)
-    - [Herramientas de Gestión](#herramientas-de-gestión)
-    - [Ramas Git](#ramas-git)
+    - [📊 Organización](#-organización)
+      - [Metodología](#metodología)
+      - [Herramientas de Gestión](#herramientas-de-gestión)
   - [Sprint 2: Carga Dinámica y Diseño Responsive](#sprint-2-carga-dinámica-y-diseño-responsive)
     - [1. Estructura de Datos (JSON Schema)](#1-estructura-de-datos-json-schema)
     - [2. Componetización con Web Components](#2-componetización-con-web-components)
@@ -93,7 +91,7 @@ cd PWM
 open index.html
 ```
 
-## 🛠 Tecnologías
+### 🛠 Tecnologías
 
 - **Frontend**:
   - HTML5 (Estructura semántica, SEO básico)
@@ -108,7 +106,7 @@ open index.html
   - Live Server (Servidor local)
   - Chrome DevTools (Depuración)
 
-## ✨ Características
+### ✨ Características
 
 - 📱 Diseño responsive para todos los dispositivos
 - 🎨 Interfaz moderna e intuitiva con animaciones fluidas
@@ -120,7 +118,7 @@ open index.html
 - 🌙 Modo oscuro para mejor experiencia nocturna
 - 📊 Estadísticas de recetas más populares
 
-## 📁 Estructura
+### 📁 Estructura
 
 ```bash
 mealmates/
@@ -133,15 +131,26 @@ mealmates/
 │ │ ├── script.js
 │ │ └── ...
 │ └── img/
+├── data/
+│ │ ├── recipes.json
+│ │ ├── categories.json  
+│ │ └── ...
+├── docs/
+│ ├── webcomponents-docs.md
+│ ├── form-validation-docs.md
+│ └── ...
 ├── src/
 │ ├── recipe.html
 │ ├── profile.html
+│ ├── components/
+│ │ ├── recipe-card.html
+│ │ ├── recipe-form.html
+│ │ └── ...
 │ └── ...
 └── index.html
 ```
 
-
-## 👥 Equipo
+### 👥 Equipo
 
 <table>
   <tr>
@@ -182,22 +191,18 @@ Para contribuir al proyecto:
 4. Pushea a la rama (`git push origin feature/NuevaFuncion`)
 5. Abre un Pull Request
 
-## 📊 Organización
+### 📊 Organización
 
-### Metodología
+#### Metodología
 - Desarrollo iterativo e incremental
 - Reuniones semanales de seguimiento
 - Control de versiones con Git
   
-### Herramientas de Gestión
+#### Herramientas de Gestión
 - **Trello**: [Enlace al tablero](https://trello.com/b/A9OGJGil/pwm)
   - Seguimiento de tareas
   - Distribución de trabajo
   - Planificación de sprints
-
-### Ramas Git
-- `main`: Código en producción
-- `develop`: Desarrollo activo
 
 ---
 
