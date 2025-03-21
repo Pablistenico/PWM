@@ -86,6 +86,7 @@ body {
 .featured-recipes {
     padding: 4rem 2rem;
     text-align: center;
+    background-color: var(--primary-color);
 }
 
 .featured-recipes h2 {
