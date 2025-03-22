@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar la lista de recetas del blog
+    new BlogRecipesList('.blog-recipes-list');
+
     // Manejo de categorías
     const categoryItems = document.querySelectorAll('.category-item input');
     categoryItems.forEach(item => {
@@ -39,4 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = `${window.baseUrl}/src/recipe.html?title=${encodeURIComponent(recipeTitle)}`;
         });
     });
-}); 
+});
