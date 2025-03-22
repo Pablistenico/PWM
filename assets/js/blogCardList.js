@@ -1,11 +1,3 @@
-if (window.location.hostname.includes('pablistenico.github.io')) {
-    // GitHub Pages environment
-    window.baseUrl = 'https://pablistenico.github.io/PWM';
-} else {
-    // Local development environment
-    window.baseUrl = '';
-}
-
 class BlogRecipesList {
     constructor(containerId) {
         this.container = document.querySelector(containerId);
@@ -21,9 +13,8 @@ class BlogRecipesList {
     async loadBlogRecipes() {
         try {
             console.log("111111")
-            const response = await fetch(window.baseUrl + '../data/recipes.json');
-            
-            console.log({aaa: "22222", response: response})
+            const response = await fetch('../data/recipes.json');
+            console.log({aaa: "22222"})
             const data = await response.json();
             console.log("333333")
             this.blogRecipes = data['blog-recipes'];
