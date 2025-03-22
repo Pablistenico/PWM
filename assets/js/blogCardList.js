@@ -42,8 +42,8 @@ class BlogRecipesList {
                 image="${recipe.image}"
                 alt="${recipe.alt}"
                 rate="${recipe.rate}"
-                chef-name="${recipe.chefName}"
-                chef-image="${recipe.chefImage}">
+                chefName="${recipe.chefName}"
+                chefImage="${recipe.chefImage}">
             </recipe-blog-card>
         `).join('');
 
