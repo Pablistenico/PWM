@@ -2,6 +2,7 @@ class BlogRecipesList {
     constructor(containerId) {
         this.container = document.querySelector(containerId);
         this.blogRecipes = [];
+        this.baseUrl = '';  // Can be configured if needed
         this.init();
     }
 
@@ -11,25 +12,43 @@ class BlogRecipesList {
     }
 
     async loadBlogRecipes() {
-        try {
-            const response = await fetch('../../../data/recipes.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            // Check if response is JSON
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new Error('Response is not JSON');
-            }
+        // Possible paths to try
+        const paths = [
+            '/data/recipes.json',
+            './data/recipes.json',
+            '../data/recipes.json',
+            '../../data/recipes.json',
+            '../../../data/recipes.json',
+        ];
 
-            const data = await response.json();
-            this.blogRecipes = data['blog-recipes'] || [];
-        } catch (error) {
-            console.error('Error cargando recetas del blog:', error);
-            console.debug('Response details:', error.message);
-            this.blogRecipes = [];
+        for (const path of paths) {
+            try {
+                console.debug('Trying path:', path);
+                const response = await fetch(this.baseUrl + path);
+                
+                if (!response.ok) {
+                    console.debug(`Path ${path} failed with status: ${response.status}`);
+                    continue;
+                }
+
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    console.debug(`Path ${path} returned non-JSON content type: ${contentType}`);
+                    continue;
+                }
+
+                const data = await response.json();
+                this.blogRecipes = data['blog-recipes'] || [];
+                console.debug('Successfully loaded recipes from:', path);
+                return;
+
+            } catch (error) {
+                console.debug(`Failed to load from ${path}:`, error.message);
+            }
         }
+
+        console.error('Error: Could not load recipes from any path');
+        this.blogRecipes = [];
     }
 
     render() {
