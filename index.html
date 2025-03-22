@@ -5,31 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MealMates - Tu compañero culinario</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/blogCardList.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="assets/js/header-footer-loader.js"></script>
     <script defer src="assets/js/recipe-blog-card.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/blogCardList.js"></script>
-    <script src="assets/js/blog.js"></script>
 </head>
 <body>
     <uheader></uheader>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Meal Mates</h1>
             <p>Tu compañero perfecto para la cocina</p>
         </div>
     </section>
+
     <section class="featured-recipes">
         <h2>Recetas destacadas</h2>
         <div class="recipe-grid">
-            <div class="blog-recipes-list">
-            </div>
+            <recipe-blog-card
+                title="Pasta Mediterránea"
+                description="Una deliciosa pasta con ingredientes frescos del Mediterráneo, perfecta para una cena ligera y sabrosa."
+                categories="Italiana, Pasta, Saludable"
+                image="https://picsum.photos/seed/food1/400/300"
+                rate="5"
+                alt="Pasta Mediterránea"
+                chefName="Chef María"
+                chefImage="https://picsum.photos/seed/food1/30/30">
+            </recipe-blog-card>
+            <recipe-blog-card
+                title="Tacos de Pescado"
+                description="Tacos de pescado estilo Baja California con col morada y salsa de chipotle. Una explosión de sabores mexicanos."
+                categories="Mexicana, Pescado, Picante"
+                image="https://picsum.photos/seed/food3/400/300"
+                rate="5"
+                alt="Tacos de Pescado"
+                chefName="Chef Carlos"
+                chefImage="https://picsum.photos/seed/food4/30/30">
+            </recipe-blog-card>
+            <recipe-blog-card
+                title="Buddha Bowl Vegano"
+                description="Un nutritivo bowl con quinoa, garbanzos asados, aguacate y una variedad de vegetales frescos."
+                categories="Vegano, Saludable, Bowl"
+                image="https://picsum.photos/seed/food5/400/300"
+                rate="4.5"
+                alt="Buddha Bowl"
+                chefName="Chef Ana"
+                chefImage="https://picsum.photos/seed/food6/30/30">
+            </recipe-blog-card>
+            <recipe-blog-card
+                title="Ramen Casero"
+                description="Un reconfortante ramen con caldo casero, huevo marinado, cerdo char siu y fideos frescos."
+                categories="Japonesa, Sopa, Tradicional"
+                image="https://picsum.photos/seed/food7/400/300"
+                rate="4"
+                alt="Ramen Casero"
+                chefName="Chef Kenji"
+                chefImage="https://picsum.photos/seed/food8/30/30">
+            </recipe-blog-card>
         </div>
-        <button class="primary-button" onclick="window.location.href='src/blog.html'">Ver Blog</button>
+        <button class="primary-button" onclick="window.location.href='/src/blog.html'">Ver Blog</button>
     </section>
-    </section>    
+
     <footer></footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
