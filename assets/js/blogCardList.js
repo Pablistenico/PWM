@@ -23,27 +23,27 @@ class BlogRecipesList {
 
         for (const path of paths) {
             try {
-                console.debug('Trying path:', path);
+                console.log('Trying path:', path);
                 const response = await fetch(this.baseUrl + path);
                 
                 if (!response.ok) {
-                    console.debug(`Path ${path} failed with status: ${response.status}`);
+                    console.log(`Path ${path} failed with status: ${response.status}`);
                     continue;
                 }
 
                 const contentType = response.headers.get('content-type');
                 if (!contentType || !contentType.includes('application/json')) {
-                    console.debug(`Path ${path} returned non-JSON content type: ${contentType}`);
+                    console.log(`Path ${path} returned non-JSON content type: ${contentType}`);
                     continue;
                 }
 
                 const data = await response.json();
                 this.blogRecipes = data['blog-recipes'] || [];
-                console.debug('Successfully loaded recipes from:', path);
+                console.log('Successfully loaded recipes from:', path);
                 return;
 
             } catch (error) {
-                console.debug(`Failed to load from ${path}:`, error.message);
+                console.log(`Failed to load from ${path}:`, error.message);
             }
         }
 
