@@ -14,7 +14,7 @@ class BlogRecipesList {
         try {
             console.log("111111")
             const response = await fetch('/data/recipes.json');
-            console.log({aaa: "22222", response})
+            console.log({aaa: "22222", response: response})
             const data = await response.json();
             console.log("333333")
             this.blogRecipes = data['blog-recipes'];
