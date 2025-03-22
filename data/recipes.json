@@ -2,66 +2,113 @@
   "recipes": [
     {
       "id": "1",
+      "option": "created",
       "title": "Pasta Primavera PRUEBA",
       "time": "30 min",
       "difficulty": "Fácil",
-      "categories": "Vegetariana, Pasta, Italiana",
+      "categories": ["Vegetariana", "Pasta", "Italiana"],
       "image": "https://picsum.photos/seed/pasta/300/200",
       "alt": "Pasta Primavera"
     },
     {
       "id": "2",
+      "option": "created",
       "title": "Salmón al Horno",
       "time": "25 min",
       "difficulty": "Medio",
-      "categories": "Pescado, Saludable, Sin Gluten",
+      "categories": ["Pescado", "Saludable", "Sin Gluten"],
       "image": "https://picsum.photos/seed/salmon/300/200",
       "alt": "Salmón al Horno"
     },
     {
       "id": "3",
+      "option": "created",
       "title": "Curry de Garbanzos",
       "time": "40 min",
       "difficulty": "Medio",
-      "categories": "Vegana, India, Especiada",
+      "categories": ["Vegana", "India", "Especiada"],
       "image": "https://picsum.photos/seed/curry/300/200",
       "alt": "Curry de Garbanzos"
     },
     {
       "id": "4",
+      "option": "created",
       "title": "Pollo al Limón",
       "time": "35 min",
       "difficulty": "Fácil",
-      "categories": "Pollo, Bajo en Calorías, Mediterránea",
+      "categories": ["Pollo", "Bajo en Calorías", "Mediterránea"],
       "image": "https://picsum.photos/seed/chicken/300/200",
       "alt": "Pollo al Limón"
     },
     {
       "id": "5",
+      "option": "created",
       "title": "Bowl de Quinoa",
       "time": "20 min",
       "difficulty": "Fácil",
-      "categories": "Vegetariana, Bowl, Proteína",
+      "categories": ["Vegetariana", "Bowl", "Proteína"],
       "image": "https://picsum.photos/seed/quinoa/300/200",
       "alt": "Bowl de Quinoa"
     },
     {
       "id": "6",
+      "option": "created",
       "title": "Pizza Casera",
       "time": "45 min",
       "difficulty": "Medio",
-      "categories": "Italiana, Masa, Familiar",
+      "categories": ["Italiana", "Masa", "Familiar"],
       "image": "https://picsum.photos/seed/pizza/300/200",
       "alt": "Pizza Casera"
     },
     {
       "id": "7",
+      "option": "created",
       "title": "Paella de Verduras",
       "time": "50 min",
       "difficulty": "Difícil",
-      "categories": "Española, Arroz, Tradicional",
+      "categories": ["Española", "Arroz", "Tradicional"],
       "image": "https://picsum.photos/seed/paella/300/200",
       "alt": "Paella de Verduras"
+    },
+    {
+      "id": "8",
+      "option": "created",
+      "title": "Pasta Mediterránea",
+      "time": "30 min",
+      "difficulty": "Fácil",
+      "categories": ["Italiana", "Pasta"],
+      "image": "https://www.cocinavital.mx/wp-content/uploads/2018/03/pasta_mediterranea.jpg",
+      "alt": "Pasta Mediterránea"
+    },
+    {
+      "id": "9",
+      "option": "created",
+      "title": "Ensalada César",
+      "time": "15 min",
+      "difficulty": "Difícil",
+      "categories": ["Ensalada", "Saludable"],
+      "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/b89f8de9-0f93-4976-b318-9ab04db353bc/Derivates/d3a08a3c-abb2-452e-9121-168f67c992c8.jpg",
+      "alt": "Ensalada César"
+    },
+    {
+      "id": "10",
+      "option": "saved",
+      "title": "Arroz 3 delicias",
+      "time": "50 min",
+      "difficulty": "Medio",
+      "categories": ["Arroces", "Chino"],
+      "image": "https://comedera.com/wp-content/uploads/sites/9/2014/03/arroz-tres-delicias.jpg?w=1200",
+      "alt": "Arroz 3 delicias"
+    },
+    {
+      "id": "11",
+      "option": "saved",
+      "title": "Sandwich mixto",
+      "time": "5 min",
+      "difficulty": "Fácil",
+      "categories": ["Desayuno", "Rápido"],
+      "image": "https://i.pinimg.com/736x/ec/a8/54/eca854f94b97902686a36fe34397c523.jpg",
+      "alt": "Sandwich mixto"
     }
   ],
   "weeklyPlan": {
