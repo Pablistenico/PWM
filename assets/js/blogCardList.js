@@ -2,7 +2,6 @@ class BlogRecipesList {
     constructor(containerId) {
         this.container = document.querySelector(containerId);
         this.blogRecipes = [];
-        this.baseUrl = '';  // Can be configured if needed
         this.init();
     }
 
@@ -12,43 +11,19 @@ class BlogRecipesList {
     }
 
     async loadBlogRecipes() {
-        // Possible paths to try
-        const paths = [
-            '/data/recipes.json',
-            './data/recipes.json',
-            '../data/recipes.json',
-            '../../data/recipes.json',
-            '../../../data/recipes.json',
-        ];
-
-        for (const path of paths) {
-            try {
-                console.log('Trying path:', path);
-                const response = await fetch(this.baseUrl + path);
-                
-                if (!response.ok) {
-                    console.log(`Path ${path} failed with status: ${response.status}`);
-                    continue;
-                }
-
-                const contentType = response.headers.get('content-type');
-                if (!contentType || !contentType.includes('application/json')) {
-                    console.log(`Path ${path} returned non-JSON content type: ${contentType}`);
-                    continue;
-                }
-
-                const data = await response.json();
-                this.blogRecipes = data['blog-recipes'] || [];
-                console.log('Successfully loaded recipes from:', path);
-                return;
-
-            } catch (error) {
-                console.log(`Failed to load from ${path}:`, error.message);
-            }
+        try {
+            console.log("111111")
+            const response = await fetch('../data/recipes.json');
+            console.log("22222")
+            const data = await response.json();
+            console.log("333333")
+            this.blogRecipes = data['blog-recipes'];
+            console.log("444444")
+        } catch (error) {
+            console.log("eeeooo")
+            console.error('Error cargando recetas del blog:', error);
+            this.blogRecipes = [];
         }
-
-        console.error('Error: Could not load recipes from any path');
-        this.blogRecipes = [];
     }
 
     render() {
