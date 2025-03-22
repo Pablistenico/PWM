@@ -21,7 +21,7 @@ class BlogRecipesList {
     async loadBlogRecipes() {
         try {
             console.log("111111")
-            const response = await fetch('../data/recipes.json');
+            const response = await fetch(window.baseUrl + '../data/recipes.json');
             
             console.log({aaa: "22222", response: response})
             const data = await response.json();
