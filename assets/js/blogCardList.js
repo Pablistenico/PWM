@@ -12,10 +12,11 @@ class BlogRecipesList {
 
     async loadBlogRecipes() {
         try {
-            const response = await fetch('../data/recipes.json');
+            const response = await fetch('../../data/recipes.json');
             const data = await response.json();
             this.blogRecipes = data['blog-recipes'];
         } catch (error) {
+            console.log('eeeoooo')
             console.error('Error cargando recetas del blog:', error);
             this.blogRecipes = [];
         }
