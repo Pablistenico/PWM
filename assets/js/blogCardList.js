@@ -12,15 +12,12 @@ class BlogRecipesList {
 
     async loadBlogRecipes() {
         try {
-            console.log("111111")
-            const response = await fetch('../data/recipes.json');
-            console.log({aaa: "22222"})
+            const isInSrcFolder = window.location.pathname.includes('/src/');
+            const basePath = isInSrcFolder ? '../' : '';
+            const response = await fetch(`${basePath}data/recipes.json`);
             const data = await response.json();
-            console.log("333333")
             this.blogRecipes = data['blog-recipes'];
-            console.log("444444")
         } catch (error) {
-            console.log("eeeooo")
             console.error('Error cargando recetas del blog:', error);
             this.blogRecipes = [];
         }
