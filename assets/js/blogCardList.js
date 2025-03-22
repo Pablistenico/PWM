@@ -12,14 +12,22 @@ class BlogRecipesList {
 
     async loadBlogRecipes() {
         try {
-            const response = await fetch('/data/recipes.json');
+            const response = await fetch('../../../data/recipes.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
+            // Check if response is JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('Response is not JSON');
+            }
+
             const data = await response.json();
-            this.blogRecipes = data['blog-recipes'];
+            this.blogRecipes = data['blog-recipes'] || [];
         } catch (error) {
             console.error('Error cargando recetas del blog:', error);
+            console.debug('Response details:', error.message);
             this.blogRecipes = [];
         }
     }
