@@ -41,56 +41,6 @@
       "alt": "Pollo al Limón"
     },
     {
-      "id": "5",
-      "option": "created",
-      "title": "Bowl de Quinoa",
-      "time": "20 min",
-      "difficulty": "Fácil",
-      "categories": ["Vegetariana", "Bowl", "Proteína"],
-      "image": "https://picsum.photos/seed/quinoa/300/200",
-      "alt": "Bowl de Quinoa"
-    },
-    {
-      "id": "6",
-      "option": "created",
-      "title": "Pizza Casera",
-      "time": "45 min",
-      "difficulty": "Medio",
-      "categories": ["Italiana", "Masa", "Familiar"],
-      "image": "https://picsum.photos/seed/pizza/300/200",
-      "alt": "Pizza Casera"
-    },
-    {
-      "id": "7",
-      "option": "created",
-      "title": "Paella de Verduras",
-      "time": "50 min",
-      "difficulty": "Difícil",
-      "categories": ["Española", "Arroz", "Tradicional"],
-      "image": "https://picsum.photos/seed/paella/300/200",
-      "alt": "Paella de Verduras"
-    },
-    {
-      "id": "8",
-      "option": "created",
-      "title": "Pasta Mediterránea",
-      "time": "30 min",
-      "difficulty": "Fácil",
-      "categories": ["Italiana", "Pasta"],
-      "image": "https://www.cocinavital.mx/wp-content/uploads/2018/03/pasta_mediterranea.jpg",
-      "alt": "Pasta Mediterránea"
-    },
-    {
-      "id": "9",
-      "option": "created",
-      "title": "Ensalada César",
-      "time": "15 min",
-      "difficulty": "Difícil",
-      "categories": ["Ensalada", "Saludable"],
-      "image": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/b89f8de9-0f93-4976-b318-9ab04db353bc/Derivates/d3a08a3c-abb2-452e-9121-168f67c992c8.jpg",
-      "alt": "Ensalada César"
-    },
-    {
       "id": "10",
       "option": "saved",
       "title": "Arroz 3 delicias",
