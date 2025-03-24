@@ -22,8 +22,6 @@
     - [3. Carga Dinámica de Contenido](#3-carga-dinámica-de-contenido)
     - [4. Diseño Responsive](#4-diseño-responsive)
     - [Capturas de Pantalla](#capturas-de-pantalla)
-      - [Vista de Escritorio](#vista-de-escritorio)
-      - [Vista Móvil](#vista-móvil)
   - [Documentación](#documentación)
 
 <div align="center">
@@ -60,8 +58,6 @@ Tu compañero perfecto para la cocina 🥘
     - [3. Carga Dinámica de Contenido](#3-carga-dinámica-de-contenido)
     - [4. Diseño Responsive](#4-diseño-responsive)
     - [Capturas de Pantalla](#capturas-de-pantalla)
-      - [Vista de Escritorio](#vista-de-escritorio)
-      - [Vista Móvil](#vista-móvil)
   - [Documentación](#documentación)
 
 ## 🎯 Sobre el Proyecto
@@ -219,6 +215,19 @@ Hemos definido un esquema de datos robusto para la aplicación, que incluye las 
   "database": "my_database",
   "collections": [
     {
+      "name": "users",
+      "fields": {
+        "id": { "type": "string", "unique": true, "primary": true },
+        "email": { "type": "string", "unique": true },
+        "password": { "type": "string" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "favoriteRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } },
+        "createdRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } },
+        "savedRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } }
+      }
+    },
+    {
       "name": "categories",
       "fields": {
         "id": { "type": "integer", "unique": true, "primary": true },
@@ -234,9 +243,10 @@ Hemos definido un esquema de datos robusto para la aplicación, que incluye las 
         "title": { "type": "string" },
         "time": { "type": "string" },
         "difficulty": { "type": "string", "enum": ["Fácil", "Medio", "Difícil"] },
-        "categories": { "type": "string" },
+        "categories": { "type": "array", "items": { "type": "string" } },
         "image": { "type": "string" },
-        "alt": { "type": "string" }
+        "alt": { "type": "string" },
+        "option": { "type": "string", "enum": ["created", "saved"], "required": false }
       }
     },
     {
@@ -342,11 +352,11 @@ Hemos implementado un diseño completamente responsive utilizando Grid Layout y 
 
 ### Capturas de Pantalla
 
-#### Vista de Escritorio
-![Vista de Escritorio](https://via.placeholder.com/800x450?text=Vista+de+Escritorio)
-
-#### Vista Móvil
-![Vista Móvil](https://via.placeholder.com/300x600?text=Vista+Móvil)
+| Vista | Imagen |
+|-------|--------|
+| **Escritorio** | <img src="rwd_screenshots/weekly_menu/desktop_1024.png" alt="Vista de Escritorio" width="600"/> |
+| **Tablet** | <img src="rwd_screenshots/weekly_menu/tablet_768.png" alt="Vista Tablet" width="500"/> |
+| **Móvil** | <img src="rwd_screenshots/weekly_menu/mobile_500.png" alt="Vista Móvil" width="300"/> |
 
 ## Documentación
 - [Requisitos del proyecto PWM](./Requisitos%20del%20proyecto%20PWM.pdf): Documento de requisitos y especificaciones del proyecto
