@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert(`¡Bienvenido/a ${user.name}! Has iniciado sesión correctamente.`);
                     
                     // Redirect to profile page after the alert
-                    window.location.href = window.baseUrl + '/src/profile.html';
+                    window.location.href = `${window.baseUrl}/src/profile.html`;
                 } else {
                     // Show error message with more details
                     alert('Error al iniciar sesión:\n- Verifica que el email y la contraseña sean correctos\n- Si no tienes cuenta, regístrate primero');
