@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si el usuario está logueado
+    const userData = JSON.parse(localStorage.getItem('user')) || JSON.parse(sessionStorage.getItem('user'));
+    const isLoggedIn = localStorage.getItem('isLoggedIn') || sessionStorage.getItem('isLoggedIn');
+
+    if (!isLoggedIn || !userData) {
+        window.location.href = '/src/login.html';
+        return;
+    }
+
+    // Cargar datos del usuario en la interfaz
+    const userNameDisplay = document.querySelector('.user-info span');
+    const profileImage = document.querySelector('.profile-image img');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    if (userNameDisplay) userNameDisplay.textContent = userData.name;
+    if (profileImage) profileImage.src = userData.avatar;
+    if (nameInput) nameInput.value = userData.name;
+    if (emailInput) emailInput.value = userData.email;
+
     // Manejo de navegación en la sidebar
     const sidebarItems = document.querySelectorAll('.sidebar-nav li[data-view]');
     const views = document.querySelectorAll('.content-panel section');
@@ -30,7 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
             description: document.getElementById('description').value,
             email: document.getElementById('email').value
         };
-        console.log('Actualizando perfil:', formData);
+
+        // Actualizar datos en el storage
+        userData.name = formData.name;
+        userData.email = formData.email;
+        
+        if (localStorage.getItem('user')) {
+            localStorage.setItem('user', JSON.stringify(userData));
+        } else {
+            sessionStorage.setItem('user', JSON.stringify(userData));
+        }
+
+        // Actualizar nombre en la sidebar
+        if (userNameDisplay) userNameDisplay.textContent = formData.name;
+
         alert('Perfil actualizado correctamente');
     });
 
@@ -56,7 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutButton = document.querySelector('.logout');
     logoutButton.addEventListener('click', function() {
         if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
-            window.location.href = '/index.html';
+            // Limpiar datos de sesión
+            localStorage.removeItem('user');
+            localStorage.removeItem('isLoggedIn');
+            sessionStorage.removeItem('user');
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = '/src/login.html';
         }
     });
 
@@ -82,29 +120,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 shareRecipes: document.getElementById('shareRecipes').checked
             };
             
-            console.log('Guardando ajustes:', settings);
-            // Aquí iría la lógica para guardar los ajustes
+            // Guardar ajustes en el objeto de usuario
+            userData.settings = settings;
+            if (localStorage.getItem('user')) {
+                localStorage.setItem('user', JSON.stringify(userData));
+            } else {
+                sessionStorage.setItem('user', JSON.stringify(userData));
+            }
+            
             alert('Ajustes guardados correctamente');
         });
     }
 
-    // Cargar ajustes guardados (simulado)
-    const savedSettings = {
-        emailNotifications: true,
-        weeklyDigest: false,
-        language: 'es',
-        darkMode: false,
-        publicProfile: true,
-        shareRecipes: true
-    };
-
-    // Aplicar ajustes guardados
-    if (settingsForm) {
-        document.getElementById('emailNotif').checked = savedSettings.emailNotifications;
-        document.getElementById('weeklyDigest').checked = savedSettings.weeklyDigest;
-        document.getElementById('language').value = savedSettings.language;
-        document.getElementById('darkMode').checked = savedSettings.darkMode;
-        document.getElementById('publicProfile').checked = savedSettings.publicProfile;
-        document.getElementById('shareRecipes').checked = savedSettings.shareRecipes;
+    // Cargar ajustes guardados del usuario
+    if (settingsForm && userData.settings) {
+        const settings = userData.settings;
+        document.getElementById('emailNotif').checked = settings.emailNotifications ?? true;
+        document.getElementById('weeklyDigest').checked = settings.weeklyDigest ?? false;
+        document.getElementById('language').value = settings.language ?? 'es';
+        document.getElementById('darkMode').checked = settings.darkMode ?? false;
+        document.getElementById('publicProfile').checked = settings.publicProfile ?? true;
+        document.getElementById('shareRecipes').checked = settings.shareRecipes ?? true;
     }
 }); 
