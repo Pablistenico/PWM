@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     // Redirect to profile page
-                    window.location.href = '/profile.html';
+                    window.location.href = 'profile.html';
                 } else {
                     alert('Email o contraseña incorrectos');
                 }

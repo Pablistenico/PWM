@@ -2,6 +2,19 @@
   "database": "my_database",
   "collections": [
     {
+      "name": "users",
+      "fields": {
+        "id": { "type": "string", "unique": true, "primary": true },
+        "email": { "type": "string", "unique": true },
+        "password": { "type": "string" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "favoriteRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } },
+        "createdRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } },
+        "savedRecipes": { "type": "array", "items": { "type": "string", "reference": "recipes.id" } }
+      }
+    },
+    {
       "name": "categories",
       "fields": {
         "id": { "type": "integer", "unique": true, "primary": true },
